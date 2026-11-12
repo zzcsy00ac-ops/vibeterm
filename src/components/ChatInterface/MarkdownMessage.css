@@ -1,0 +1,258 @@
+/**
+ * MarkdownMessage 样式
+ *
+ * Streamdown 使用 data-streamdown 属性标记元素
+ * 与 Radix UI 主题系统集成
+ * 支持窗口透明效果
+ */
+
+/* ========== 基础容器 ========== */
+
+.markdown-message {
+  line-height: 1.6;
+  color: var(--gray-11);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 确保代码块内的元素不受父元素颜色影响（但不覆盖 Shiki 的高亮颜色） */
+.markdown-message pre {
+  color: unset !important;
+}
+
+/* ========== Streamdown 元素样式 ========== */
+
+/* 代码块 - 关键：使用 white-space: pre 保留换行 */
+.markdown-message [data-streamdown="code-block"] {
+  background: var(--gray-3);
+  border: 1px solid var(--gray-6);
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 0.5em 0;
+  font-size: 0.9em;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  /* 关键：保留代码格式和换行 */
+  white-space: pre;
+  /* 确保不会自动换行 */
+  word-wrap: normal;
+  overflow-wrap: normal;
+}
+
+/* ========== 代码块换行修复（补充样式） ========== */
+
+/* 强制 Shiki 渲染的每一行 span 换行显示 */
+/* 关键：使用 !important 覆盖 Tailwind 的 inline 样式 */
+.markdown-message [data-streamdown="code-block-body"] code > span {
+  display: block !important;
+  line-height: 1.5;
+}
+
+/* 确保 token span 保持 inline（不破坏语法高亮颜色） */
+.markdown-message [data-streamdown="code-block-body"] code > span > span {
+  display: inline !important;
+}
+
+/* 隐藏代码块顶部的语言标签（如果需要） */
+.markdown-message [data-streamdown="code-block-header"] {
+  display: none !important;
+}
+
+/* 确保行内代码不受影响 */
+.markdown-message [data-streamdown="inline-code"] {
+  display: inline !important;
+  white-space: normal !important;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  background: var(--gray-4);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* 标题 */
+.markdown-message [data-streamdown="heading-1"] {
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--gray-6);
+  padding-bottom: 0.3em;
+  line-height: 1.3;
+}
+
+.markdown-message [data-streamdown="heading-2"] {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--gray-7);
+  padding-bottom: 0.3em;
+  line-height: 1.3;
+}
+
+.markdown-message [data-streamdown="heading-3"] {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+.markdown-message [data-streamdown="heading-4"] {
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+.markdown-message [data-streamdown="heading-5"],
+.markdown-message [data-streamdown="heading-6"] {
+  font-size: 0.875em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+/* 段落 */
+.markdown-message [data-streamdown="paragraph"] {
+  margin: 0.5em 0;
+}
+
+/* 列表 */
+.markdown-message [data-streamdown="unordered-list"],
+.markdown-message [data-streamdown="ordered-list"] {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.markdown-message [data-streamdown="list-item"] {
+  margin: 0.25em 0;
+}
+
+/* 引用块 */
+.markdown-message [data-streamdown="blockquote"] {
+  border-left: 3px solid var(--accent-9);
+  padding-left: 1em;
+  margin: 0.5em 0;
+  color: var(--gray-11);
+  font-style: italic;
+}
+
+/* 链接 */
+.markdown-message [data-streamdown="link"] {
+  color: var(--accent-9);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
+}
+
+.markdown-message [data-streamdown="link"]:hover {
+  border-bottom-color: var(--accent-9);
+}
+
+/* 表格 */
+.markdown-message [data-streamdown="table-wrapper"] {
+  margin: 0.5em 0;
+  overflow-x: auto;
+}
+
+.markdown-message [data-streamdown="table"] {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-message [data-streamdown="table-header-cell"],
+.markdown-message [data-streamdown="table-cell"] {
+  border: 1px solid var(--gray-6);
+  padding: 0.5em;
+}
+
+.markdown-message [data-streamdown="table-header"] {
+  background: var(--gray-3);
+}
+
+.markdown-message [data-streamdown="table-header-cell"] {
+  font-weight: 600;
+}
+
+.markdown-message [data-streamdown="table-row"]:nth-child(even) {
+  background: var(--gray-2);
+}
+
+/* 水平线 */
+.markdown-message [data-streamdown="horizontal-rule"] {
+  border: none;
+  border-top: 1px solid var(--gray-6);
+  margin: 1.5em 0;
+}
+
+/* Mermaid 图表 */
+.markdown-message [data-streamdown="mermaid-block"] {
+  background: var(--gray-3);
+  border-radius: 6px;
+  padding: 1em;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+/* 修复 Mermaid SVG 尺寸问题 - 确保全屏正常显示 */
+.markdown-message [data-streamdown="mermaid-block"] svg {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+}
+
+/* ========== 深色模式背景（使用 Radix UI 主题类） ========== */
+
+/* 使用 Radix UI 的主题类而非媒体查询，确保跟随应用主题切换 */
+/* 注意：移除 backdrop-filter，因为它会创建新的包含块，影响 position: fixed 的全屏模态框 */
+.theme-dark .markdown-message {
+  background: rgba(22, 22, 23, 0.8);
+  /* backdrop-filter: blur(10px);  ← 会导致全屏模态框定位错误 */
+  /* -webkit-backdrop-filter: blur(10px); */
+}
+
+.theme-dark .markdown-message [data-streamdown="code-block"] {
+  background: rgba(26, 26, 27, 0.9);
+}
+
+/* Light 模式不需要特殊背景，保持透明 */
+
+/* ========== 滚动条样式 ========== */
+
+.markdown-message [data-streamdown="code-block"]::-webkit-scrollbar {
+  height: 8px;
+}
+
+.markdown-message [data-streamdown="code-block"]::-webkit-scrollbar-track {
+  background: var(--gray-2);
+  border-radius: 4px;
+}
+
+.markdown-message [data-streamdown="code-block"]::-webkit-scrollbar-thumb {
+  background: var(--gray-7);
+  border-radius: 4px;
+}
+
+.markdown-message [data-streamdown="code-block"]::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-8);
+}
+
+/* ========== 响应式调整 ========== */
+
+@media (max-width: 768px) {
+  .markdown-message [data-streamdown="heading-1"] {
+    font-size: 1.75em;
+  }
+
+  .markdown-message [data-streamdown="heading-2"] {
+    font-size: 1.25em;
+  }
+
+  .markdown-message [data-streamdown="code-block"] {
+    font-size: 0.85em;
+    padding: 0.75em;
+  }
+}

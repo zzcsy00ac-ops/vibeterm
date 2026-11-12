@@ -1,0 +1,78 @@
+/**
+ * Skills 设置页面样式
+ */
+
+.skills-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  overflow: hidden;
+}
+
+.skills-header {
+  margin-bottom: var(--space-4);
+  flex-shrink: 0;
+}
+
+.skills-stats {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--gray-4);
+  flex-shrink: 0;
+}
+
+.skills-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-right: var(--space-2);
+}
+
+.skills-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: var(--gray-2);
+  border-radius: var(--radius-3);
+  border: 1px dashed var(--gray-6);
+}
+
+/* 滚动条样式 */
+.skills-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.skills-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.skills-list::-webkit-scrollbar-thumb {
+  background: var(--gray-6);
+  border-radius: var(--radius-1);
+}
+
+.skills-list::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-7);
+}
+
+/* 响应式适配 */
+@media (max-width: 640px) {
+  .skills-page {
+    padding: var(--space-3);
+  }
+
+  .skills-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .skills-stats {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+}

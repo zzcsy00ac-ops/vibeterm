@@ -1,0 +1,45 @@
+/**
+ * XtermTerminal 组件样式
+ */
+
+.xterm-terminal {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 覆盖 xterm.js 默认样式以适应容器 */
+.xterm-terminal .xterm {
+  width: 100% !important;
+  height: 100% !important;
+  flex: 1;
+  min-height: 0;
+}
+
+.xterm-terminal .xterm-viewport {
+  overflow-y: auto;
+}
+
+.xterm .xterm-viewport {
+  background: transparent !important;
+}
+
+/* 滚动条样式 */
+.xterm-terminal .xterm-viewport::-webkit-scrollbar {
+  width: 8px;
+}
+
+.xterm-terminal .xterm-viewport::-webkit-scrollbar-track {
+  /* background: #1a1a1a; */
+}
+
+.xterm-terminal .xterm-viewport::-webkit-scrollbar-thumb {
+  /* background: #444; */
+  border-radius: 4px;
+}
+
+.xterm-terminal .xterm-viewport::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

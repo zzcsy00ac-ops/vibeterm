@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- 应用类别 -->
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.developer-tools</string>
+
+	<!-- 允许访问本地网络 -->
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>This app needs access to the local network for SSH connections.</string>
+
+	<!-- 允许访问网络服务器 -->
+	<key>NSNetworkVolumesUsageDescription</key>
+	<string>This app needs access to network volumes for file operations.</string>
+
+	<!-- 防止 App Nap（防止后台应用被挂起） -->
+	<key>NSAppSleepDisabled</key>
+	<true/>
+
+	<!-- 支持高 DPI 显示 -->
+	<key>NSHighResolutionCapable</key>
+	<true/>
+</dict>
+</plist>

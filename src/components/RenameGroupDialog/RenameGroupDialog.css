@@ -1,0 +1,147 @@
+/**
+ * 重命名分组对话框样式
+ * 复用 CreateGroupDialog 的样式
+ */
+
+/* Dialog 基础样式 */
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--black-a11);
+  opacity: 0.5;
+  z-index: 50;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-background);
+  border: 1px solid var(--gray-a5);
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-5);
+  z-index: 51;
+  min-width: 400px;
+  max-width: 90vw;
+  animation: scaleIn 0.15s ease-out;
+  color: var(--color-text);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 创建分组对话框特定样式 */
+.create-group-dialog {
+  padding: 24px;
+  width: 400px;
+}
+
+.dialog-title {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 16px;
+  color: var(--color-text);
+  line-height: var(--line-height-tight);
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.required {
+  color: var(--red-9);
+}
+
+.form-input {
+  padding: 8px 12px;
+  border: 1px solid var(--gray-a7);
+  border-radius: var(--radius-3);
+  font-size: var(--font-size-2);
+  background: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  transition: all 0.15s;
+}
+
+.form-input:focus {
+  border-color: var(--accent-9);
+  box-shadow: 0 0 0 1px var(--accent-9);
+}
+
+.form-input::placeholder {
+  color: var(--gray-a9);
+}
+
+/* 底部按钮区域 */
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-3);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.15s;
+  border: none;
+}
+
+.btn-secondary {
+  background: var(--gray-a3);
+  color: var(--gray-12);
+}
+
+.btn-secondary:hover {
+  background: var(--gray-a4);
+}
+
+.btn-primary {
+  background: var(--accent-9);
+  color: var(--color-text);
+}
+
+.btn-primary:hover {
+  background: var(--accent-10);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

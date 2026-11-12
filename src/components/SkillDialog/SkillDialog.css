@@ -1,0 +1,108 @@
+/**
+ * SkillDialog 组件样式
+ *
+ * 使用 @radix-ui/themes 的 Dialog 组件，只需要少量自定义样式
+ */
+
+/* ========== 对话框内容调整 ========== */
+.skill-dialog-content {
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== 头部 ========== */
+.skill-dialog-content .dialog-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-a5);
+  margin-bottom: 16px;
+}
+
+/* 关闭按钮 */
+.dialog-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-2);
+  background: transparent;
+  color: var(--gray-a11);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dialog-close-btn:hover {
+  background: var(--gray-a4);
+  color: var(--gray-12);
+}
+
+.dialog-close-btn:focus-visible {
+  outline: 2px solid var(--accent-8);
+  outline-offset: 2px;
+}
+
+/* ========== 主体内容 ========== */
+.skill-dialog-content .dialog-body {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* ========== 表单字段 ========== */
+.form-field-grow {
+  flex: 1;
+  min-height: 0;
+}
+
+.form-textarea-grow {
+  flex: 1;
+  min-height: 200px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', monospace;
+  overflow: hidden;
+  resize: none;
+}
+
+/* 隐藏 Radix TextArea 内部滚动条 */
+.form-textarea-grow textarea {
+  overflow: hidden !important;
+  resize: none !important;
+}
+
+/* ========== 底部按钮 ========== */
+.skill-dialog-content .dialog-footer {
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-a5);
+  margin-top: 16px;
+}
+
+/* ========== 响应式适配 ========== */
+@media (max-width: 640px) {
+  .skill-dialog-content {
+    max-height: 90vh;
+  }
+
+  .form-textarea-grow {
+    min-height: 150px;
+  }
+}
+
+/* ========== 滚动条样式 ========== */
+.skill-dialog-content .dialog-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.skill-dialog-content .dialog-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.skill-dialog-content .dialog-body::-webkit-scrollbar-thumb {
+  background-color: var(--gray-a6);
+  border-radius: 4px;
+}
+
+.skill-dialog-content .dialog-body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-a8);
+}

@@ -1,0 +1,106 @@
+/**
+ * ChatSidebar 样式
+ */
+
+.chat-sidebar {
+  height: 100%;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.chat-sidebar-header {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.chat-sidebar-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.chat-sidebar-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-sidebar-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-sidebar-list::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 3px;
+}
+
+.chat-sidebar-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-hover);
+}
+
+.chat-sidebar-empty {
+  padding: 32px 16px;
+  text-align: center;
+}
+
+/* ==================== ConversationItem ==================== */
+
+.conversation-item {
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  user-select: none;
+}
+
+.conversation-item:hover {
+  background-color: var(--color-hover);
+}
+
+.conversation-item.active {
+  background-color: var(--color-surface);
+}
+
+.conversation-item.active .conversation-item-title {
+  color: var(--accent-foreground);
+}
+
+.conversation-item-header {
+  width: 100%;
+}
+
+.conversation-item-title {
+  flex: 1;
+  overflow: hidden;
+  gap: 6px;
+}
+
+.conversation-item-title svg {
+  flex-shrink: 0;
+}
+
+.conversation-item-actions {
+  flex-shrink: 0;
+  gap: 4px;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.conversation-item:hover .conversation-item-actions {
+  opacity: 1;
+}
+
+/* ==================== 空状态 ==================== */
+
+.chat-sidebar-empty {
+  padding: 48px 16px;
+  text-align: center;
+  color: var(--color-gray);
+}
+
+/* ==================== 临时聊天按钮 ==================== */
+
+.ephemeral-chat-btn:hover {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+}

@@ -1,0 +1,239 @@
+/**
+ * SFTP 文件列表组件样式
+ */
+
+.sftp-file-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 0;
+}
+
+/* ==================== 加载状态 ==================== */
+
+/* 过滤栏 */
+.sftp-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  flex-shrink: 0;
+}
+
+.sftp-filter-bar__icon {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.sftp-filter-bar__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  outline: none;
+  min-width: 0;
+}
+
+.sftp-filter-bar__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.sftp-filter-bar__clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.sftp-filter-bar__clear:hover {
+  background: var(--color-hover-bg);
+  color: var(--color-text-primary);
+}
+
+.sftp-file-list--loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px;
+  height: 100%;
+}
+
+.sftp-file-list__spinner {
+  animation: spin 1s linear infinite;
+  color: var(--color-primary);
+}
+
+.sftp-file-list__status-text {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==================== 文件容器 ==================== */
+
+.sftp-files {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  transition: background-color 0.2s ease;
+  min-height: 0;
+}
+
+/* 滚动条样式 */
+.sftp-files::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sftp-files::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sftp-files::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 4px;
+}
+
+.sftp-files::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
+}
+
+/* ==================== 拖放状态 ==================== */
+
+.sftp-files--drag-active {
+  background-color: var(--color-drag-bg);
+  border: 2px dashed var(--color-primary);
+  border-radius: 8px;
+  margin: 4px;
+}
+
+.sftp-files__drag-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: var(--color-drag-overlay-bg);
+  z-index: 10;
+}
+
+.sftp-files__drag-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+/* ==================== 空状态 ==================== */
+
+.sftp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 60px 20px;
+  color: var(--color-text-muted);
+}
+
+.sftp-empty__icon {
+  opacity: 0.5;
+}
+
+.sftp-empty__text {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.sftp-empty__hint {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ==================== 文件列表 ==================== */
+
+.sftp-file-items {
+  padding: 8px 0;
+}
+
+.sftp-file-item {
+  /* 保持文件项可点击 */
+}
+
+/* 列表头 */
+.sftp-file-list__header {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: var(--color-bg-primary);
+  z-index: 1;
+}
+
+.sftp-file-list__header-name {
+  flex: 0 0 40%;
+}
+
+.sftp-file-list__header-mode {
+  flex: 0 0 100px;
+}
+
+.sftp-file-list__header-size {
+  flex: 0 0 80px;
+  text-align: right;
+}
+
+.sftp-file-list__header-date {
+  flex: 1;
+  text-align: right;
+  min-width: 120px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .sftp-file-list__header-name {
+    flex: 0 0 35%;
+  }
+
+  .sftp-file-list__header-mode {
+    flex: 0 0 80px;
+  }
+
+  .sftp-file-list__header-size {
+    flex: 0 0 60px;
+  }
+
+  .sftp-file-list__header-date {
+    display: none;
+  }
+}

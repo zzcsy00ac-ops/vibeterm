@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@source "../node_modules/streamdown/dist/*.js";
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow:hidden;
+}
+
+/* 全局默认禁用文字选中 - 打造原生应用体验 */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+/* 允许选中的元素白名单 - 用于需要复制文字的场景 */
+.selectable-text,
+.message-text,
+.terminal-output,
+.error-message,
+.log-viewer,
+.code-block,
+pre,
+code,
+.message-item-content,
+.markdown-message,
+.message-text *,
+.markdown-message * {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  cursor: text;
+}
+
+.app-container {
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* 浅色模式 */
+.theme-light .app-container {
+  background-color: rgba(255,255,255,0.85)
+}
+
+/* 深色模式 */
+.theme-dark .app-container {
+  background-color: rgba(0,0,0,0.8)
+}
+
+/* 跟随系统模式 */
+.theme-system .app-container {
+
+}
+
+.sidebarToolsContainer {
+  position: absolute;
+  left:1dvh;
+  top: 1dvh;
+}
+
+/* ==================== 全局滚动条样式 ==================== */
+
+/* Webkit 浏览器滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-a6);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-a8);
+  background-clip: content-box;
+}
+
+/* Firefox 滚动条样式 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-a6) transparent;
+}
+
+/* ==================== Z-Index Scale ==================== */
+:root {
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-dialog-modal: 1200;
+  --z-dialog-content: 1201;
+  --z-nested-modal-backdrop: 1060;
+  --z-nested-modal: 1070;
+  --z-popover: 1080;
+  --z-tooltip: 1090;
+  --z-context-menu: 1100;
+}
+

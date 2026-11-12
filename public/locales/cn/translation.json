@@ -1,0 +1,715 @@
+{
+  "common": {
+    "buttons": {
+      "cancel": "取消",
+      "confirm": "确认",
+      "delete": "删除",
+      "save": "保存",
+      "ok": "确定",
+      "create": "创建",
+      "add": "添加",
+      "close": "关闭"
+    },
+    "cancel": "取消",
+    "confirm": "确认"
+  },
+  "home": {
+    "welcome": "welcome to cn"
+  },
+  "app": {
+    "update": "更新",
+    "settings": "设置",
+    "mores": "更多",
+    "about": "关于",
+    "logout": "退出",
+    "chats": "聊天",
+    "sshManager": "SSH 管理",
+    "providerManager": "模型供应商",
+    "sidebar": "侧边栏"
+  },
+  "empty": {
+    "welcome": "欢迎",
+    "noTabs": "暂无打开的标签",
+    "message": "从左侧选择项目开始吧 🚀",
+    "messages": [
+      "准备好开始你的冒险了吗？ 🎯",
+      "一切就绪，等你来探索 ✨",
+      "新的一天，新的开始！ ☀️",
+      "空白画布，等待你的创作 🎨",
+      "你的旅程，从这里开始 🗺️",
+      "今天想做点什么？ 💡",
+      "别害羞，点点什么吧 😊",
+      "这里空荡荡的，不如加点料？ 🍳",
+      "无事发生...暂时 😴",
+      "太安静了，来点动静吧 🔊",
+      "可能性是无限的 🌈",
+      "第一个标签总是最特别的 ⭐",
+      "从零到一，就差你的点击 🚀",
+      "空白也是一种美，但更多会更有趣 🎭",
+      "你的工作区，你定义 📝",
+      "欢迎回来！准备好开始了吗？ 👋",
+      "很高兴见到你！ ☺️",
+      "又是一个充满可能性的日子 🌟",
+      "让我们做点什么吧 💪",
+      "时间就是现在 ⏰",
+      "开始吧！ ▶️",
+      "你说了算 👑",
+      "行动起来 🏃",
+      "创造精彩 ✨",
+      "等待你的指令 📡"
+    ]
+  },
+  "ssh": {
+    "sessions": "SSH 会话",
+    "sudo": {
+      "title": "需要 Sudo 身份验证",
+      "securityLocal": "本地处理 - 您的密码绝不离开发送",
+      "securityEncrypted": "SSH 协议端到端加密传输",
+      "securityNoAI": "AI 隔离 - 绝不传输至外部服务",
+      "host": "主机",
+      "user": "用户",
+      "command": "命令",
+      "passwordLabel": "Sudo 密码",
+      "submit": "验证",
+      "cancel": "取消",
+      "saveCheckbox": "记录密码，1 小时内免输入",
+      "saveHint": "密码安全存储于系统钥匙串中"
+    },
+    "contextMenu": {
+      "createGroup": "创建分组",
+      "createSubgroup": "创建子分组",
+      "createProfile": "创建 SSH 配置",
+      "rename": "重命名",
+      "delete": "删除",
+      "edit": "编辑",
+      "expandAll": "全部展开",
+      "collapseAll": "全部折叠"
+    },
+    "dialogs": {
+      "createGroup": "创建分组",
+      "createSubgroup": "创建子分组",
+      "createProfile": "新建 SSH 连接配置",
+      "editProfile": "编辑 SSH 连接配置",
+      "renameGroup": "重命名分组",
+      "deleteConfirmTitle": "确认删除",
+      "deleteGroupConfirm": "确定要删除分组\"{{name}}\"吗？此操作将同时删除该分组下的所有子分组和 SSH 配置，且无法恢复。",
+      "deleteProfileConfirm": "确定要删除 SSH 配置\"{{name}}\"吗？此操作无法恢复。"
+    },
+    "sidebar": {
+      "name": "名称",
+      "group": "分组",
+      "icon": "图标",
+      "noGroup": "无分组",
+      "noIcon": "无图标",
+      "selectGroup": "选择或创建分组",
+      "selectIcon": "选择图标",
+      "namePlaceholder": "如: 生产服务器",
+      "required": "必填"
+    },
+    "icons": {
+      "server": "服务器",
+      "database": "数据库",
+      "cloud": "云服务",
+      "network": "网络",
+      "development": "开发",
+      "production": "生产",
+      "staging": "测试",
+      "backup": "备份"
+    },
+    "form": {
+      "connectionMode": "连接模式",
+      "host": "主机",
+      "port": "端口",
+      "username": "用户名",
+      "authType": "认证方式",
+      "password": "密码",
+      "unassigned": "未分组",
+      "groupName": "分组名称",
+      "groupNamePlaceholder": "例如：生产环境、开发环境",
+      "newGroupName": "新分组名称"
+    },
+    "placeholders": {
+      "host": "example.com 或 192.168.1.1",
+      "port": "22",
+      "username": "留空则每次连接时询问",
+      "password": "输入密码"
+    },
+    "connectionModes": {
+      "direct": "直接连接",
+      "jumpHost": "跳板机",
+      "socksProxy": "SOCKS 代理",
+      "httpProxy": "HTTP 代理"
+    },
+    "authTypes": {
+      "auto": "自动",
+      "password": "密码",
+      "key": "密钥",
+      "agent": "Agent",
+      "keyboardInteractive": "键盘交互"
+    },
+    "validation": {
+      "nameRequired": "名称不能为空",
+      "hostRequired": "主机地址不能为空",
+      "hostInvalid": "主机地址格式无效（支持域名、IPv4 或 localhost）"
+    },
+    "buttons": {
+      "cancel": "取消",
+      "create": "创建",
+      "save": "保存",
+      "confirm": "确认",
+      "rename": "重命名",
+      "delete": "删除"
+    },
+    "password": {
+      "setPassword": "设置密码",
+      "forget": "忘记",
+      "savedInKeychain": "密码已保存到密钥链",
+      "enterUsernameHostFirst": "请先输入用户名和主机"
+    },
+    "privateKey": {
+      "addKey": "添加私钥...",
+      "passphraseHint": "如果您的私钥有密码保护，连接时将提示您输入。"
+    },
+    "passwordPrompt": {
+      "title": "SSH 认证",
+      "enterPasswordFor": "输入 <strong>{{user}}@{{host}}</strong> 的密码",
+      "passwordLabel": "密码",
+      "passwordPlaceholder": "输入密码",
+      "savePasswordToKeychain": "保存密码到密钥链",
+      "cancel": "取消",
+      "connect": "连接",
+      "connecting": "连接中..."
+    },
+    "keyPassphrasePrompt": {
+      "title": "SSH 密钥密码",
+      "enterPassphraseFor": "输入私钥密码：",
+      "passphraseLabel": "密码",
+      "passphrasePlaceholder": "输入密码",
+      "saveToKeychain": "保存密码到密钥链",
+      "cancel": "取消",
+      "connect": "连接",
+      "connecting": "连接中..."
+    },
+    "keychain": {
+      "passwordNotFound": "密钥链中未找到密码",
+      "getPasswordFailed": "从密钥链获取密码失败"
+    }
+  },
+  "provider": {
+    "list": "模型提供商",
+    "ungrouped": "未分组",
+    "contextMenu": {
+      "createCategory": "创建分类",
+      "addProvider": "添加提供商",
+      "edit": "编辑",
+      "delete": "删除",
+      "rename": "重命名",
+      "duplicate": "复制",
+      "expandAll": "全部展开",
+      "collapseAll": "全部折叠"
+    },
+    "dialogs": {
+      "addProvider": "添加提供商",
+      "editProvider": "编辑提供商",
+      "createCategory": "创建分类",
+      "renameCategory": "重命名分类",
+      "deleteConfirmTitle": "确认删除",
+      "deleteCategoryConfirm": "确定要删除分类\"{{name}}\"吗？此操作将同时删除该分类下的所有提供商，且无法恢复。",
+      "deleteProviderConfirm": "确定要删除提供商\"{{name}}\"吗？此操作无法恢复。"
+    },
+    "form": {
+      "providerName": "供应商名称",
+      "officialUrl": "官网链接",
+      "apiKey": "API 密钥",
+      "requestUrl": "API 请求地址",
+      "apiType": "接口类型",
+      "models": "模型列表",
+      "addModel": "添加模型",
+      "categoryName": "分类名称",
+      "categoryNamePlaceholder": "例如：生产环境、开发环境"
+    },
+    "model": {
+      "addModel": "添加模型",
+      "addTitle": "添加模型",
+      "modelId": "模型 ID",
+      "modelIdPlaceholder": "例如: gpt-4, claude-3-opus",
+      "displayName": "显示名称",
+      "displayNamePlaceholder": "可选，默认使用模型 ID",
+      "contextWindow": "上下文窗口 (k)",
+      "contextWindowPlaceholder": "例如: 128, 200",
+      "optional": "可选",
+      "enabledByDefault": "默认启用",
+      "empty": "未配置模型",
+      "removeModel": "移除模型"
+    },
+    "validation": {
+      "nameRequired": "供应商名称不能为空",
+      "apiKeyRequired": "API 密钥不能为空",
+      "requestUrlRequired": "API 请求地址不能为空",
+      "atLeastOneModel": "请至少添加一个模型"
+    },
+    "apiTypes": {
+      "openai": "OpenAI 兼容",
+      "anthropic": "Anthropic",
+      "ollama": "Ollama"
+    }
+  },
+  "terminal": {
+    "status": {
+      "disconnected": "已断开",
+      "connecting": "连接中...",
+      "connected": "已连接",
+      "reconnecting": "重连中...",
+      "error": "连接错误"
+    },
+    "buttons": {
+      "disconnect": "断开连接",
+      "reconnect": "重新连接",
+      "reconnecting": "重连中...",
+      "disconnectTooltip": "断开连接",
+      "reconnectTooltip": "重新连接",
+      "openSFTP": "打开文件管理器",
+      "sftp": "文件"
+    },
+    "upload": {
+      "uploading": "正在上传 {{count}} 个文件...",
+      "uploadingFile": "正在上传 {{file}}... ({{current}}/{{total}})",
+      "partialFailure": "{{completed}} 个成功，{{failed}} 个失败",
+      "allFailed": "{{count}} 个上传失败",
+      "clickToView": "点击查看",
+      "errorTitle": "上传失败",
+      "errorIntro": "以下文件上传失败：",
+      "retryFailed": "重试失败项",
+      "skipAll": "全部跳过"
+    }
+  },
+  "sftp": {
+    "title": "文件管理器",
+    "toolbar": {
+      "goUp": "返回上级",
+      "refresh": "刷新",
+      "toggleFilter": "过滤",
+      "createDirectory": "新建目录",
+      "selectFiles": "选择文件",
+      "upload": "上传文件",
+      "close": "关闭"
+    },
+    "createDir": {
+      "title": "新建文件夹",
+      "nameLabel": "文件夹名称",
+      "placeholder": "输入文件夹名称...",
+      "create": "创建",
+      "creating": "创建中...",
+      "nameRequired": "文件夹名称不能为空",
+      "invalidName": "文件夹名称不能包含特殊字符（/\\:*?\"<>|）"
+    },
+    "filter": {
+      "placeholder": "过滤文件...",
+      "clear": "清除过滤"
+    },
+    "fileItem": {
+      "permission": "权限",
+      "size": "大小",
+      "modified": "修改时间"
+    },
+    "fileList": {
+      "loading": "加载中...",
+      "empty": "空目录",
+      "rootEmpty": "根目录为空",
+      "noResults": "未找到匹配的文件",
+      "tryDifferentFilter": "尝试使用不同的过滤条件",
+      "dragToUpload": "拖放文件到此处上传",
+      "dropFiles": "拖放文件到此处上传",
+      "header": {
+        "name": "名称",
+        "permission": "权限",
+        "size": "大小",
+        "modified": "修改时间"
+      }
+    },
+    "contextMenu": {
+      "open": "打开文件夹",
+      "download": "下载",
+      "rename": "重命名",
+      "renamePrompt": "输入新名称",
+      "delete": "删除",
+      "copyPath": "复制路径",
+      "properties": "属性"
+    },
+    "delete": {
+      "title": "确认删除",
+      "confirm": "确定要删除 \"{{name}}\" 吗？",
+      "warning": "此操作无法撤销"
+    },
+    "progress": {
+      "close": "关闭"
+    },
+    "upload": {
+      "status": {
+        "pending": "等待上传",
+        "uploading": "上传中",
+        "completed": "已完成",
+        "failed": "失败",
+        "cancelled": "已取消"
+      },
+      "clearCompleted": "清理已完成",
+      "cancel": "取消",
+      "retry": "重试",
+      "resume": "断点续传",
+      "queueStatus": {
+        "uploading": "上传中: {{count}} 个",
+        "queued": "队列中: {{count}} 个"
+      },
+      "overwrite": {
+        "title": "确认覆盖文件",
+        "confirm": "文件 \"{{name}}\" 已存在，是否覆盖？"
+      }
+    },
+    "download": {
+      "status": {
+        "downloading": "下载中",
+        "completed": "已完成",
+        "failed": "失败"
+      },
+      "clearCompleted": "清理已完成"
+    }
+  },
+  "connectionTest": {
+    "fillRequired": "请先填写主机地址和用户名",
+    "success": "连接成功！",
+    "failed": "连接失败",
+    "testing": "测试中...",
+    "testButton": "测试连接",
+    "connecting": "连接中...",
+    "saveAndConnect": "保存并连接"
+  },
+  "settingsValidation": {
+    "invalidThemeMode": "请选择有效的主题模式",
+    "invalidLanguage": "请选择有效的语言"
+  },
+  "settings": {
+    "nav": {
+      "general": "通用",
+      "appearance": "外观",
+      "skills": "技能",
+      "data": "数据",
+      "contact": "联系我们"
+    },
+    "contact": {
+      "description": "与我们联系，提供反馈和获取支持",
+      "thankYou": "感谢使用我们的产品！",
+      "continuousUpdate": "我们将持续更新，为您提供更好的体验。",
+      "scanQrCode": "扫码加入我们的{{platform}}社区",
+      "communityMessage": "与我们联系，分享您的反馈",
+      "feedbackMessage": "我们欢迎您的建议和反馈，帮助我们改进。"
+    },
+    "appearance": {
+      "title": "外观设置",
+      "description": "自定义应用的外观和行为",
+      "themeMode": "主题模式",
+      "themeModeDescription": "选择您偏好的主题外观"
+    },
+    "general": {
+      "title": "通用设置",
+      "description": "管理您的应用偏好设置",
+      "language": "语言",
+      "languageDescription": "选择您偏好的语言",
+      "languageOption": {
+        "auto": "自动",
+        "en": "English",
+        "cn": "中文"
+      },
+      "defaultModel": "默认模型",
+      "defaultModelDescription": "选择新会话使用的默认 AI 模型",
+      "defaultModelNote": "新会话将使用此模型。你可以在每个会话中单独修改。",
+      "noProviderConfigured": "尚未配置模型供应商，请先添加供应商。",
+      "provider": "供应商",
+      "model": "模型",
+      "selectProvider": "选择供应商",
+      "selectModel": "选择模型"
+    },
+    "data": {
+      "title": "数据设置",
+      "description": "管理数据导入导出",
+      "export": {
+        "title": "导出数据",
+        "description": "将所有应用数据导出为备份文件",
+        "button": "导出备份"
+      },
+      "import": {
+        "title": "导入数据",
+        "description": "从备份文件恢复应用数据",
+        "button": "导入备份",
+        "dialogTitle": "导入备份",
+        "dialogDescription": "选择如何处理现有数据：",
+        "replaceButton": "替换现有数据",
+        "mergeButton": "与现有数据合并",
+        "warning": "警告：替换操作将在导入前删除所有现有数据。"
+      },
+      "status": {
+        "success": "成功",
+        "error": "错误",
+        "exporting": "正在导出数据...",
+        "importing": "正在导入数据...",
+        "validating": "正在验证备份..."
+      },
+      "validation": {
+        "backupInfo": "备份信息",
+        "stores": "数据存储",
+        "version": "版本",
+        "date": "创建时间",
+        "includedStores": "包含的数据："
+      },
+      "info": {
+        "title": "关于数据备份",
+        "content": "备份文件包含您的所有应用数据，包括设置、模型供应商、聊天记录和 SSH 配置。请妥善保管，切勿与他人分享。"
+      },
+      "error": {
+        "zipContents": "ZIP 文件内容：",
+        "suggestions": "建议：",
+        "copyDetails": "复制错误详情"
+      }
+    },
+    "selectPlaceholder": "选择一个选项",
+    "themeMode_system": "跟随系统",
+    "themeMode_light": "浅色模式",
+    "themeMode_dark": "深色模式"
+  },
+  "chat": {
+    "newChat": {
+      "defaultTitle": "新建聊天"
+    },
+    "ephemeral": {
+      "title": "临时聊天",
+      "shortTitle": "临时",
+      "warning": "此会话中的消息不会被保存，关闭后将被清空。",
+      "tooltip": "开始临时聊天（不保存）"
+    },
+    "tools": {
+      "label": "工具",
+      "title": "选择 AI 工具",
+      "searchPlaceholder": "搜索工具...",
+      "selectAll": "全选",
+      "clearAll": "清空",
+      "noResults": "未找到匹配的工具",
+      "selectedCount": "已选 {{current}} / {{total}} 个"
+    },
+    "sidebar": {
+      "title": "聊天",
+      "newChat": "新建聊天",
+      "empty": "暂无会话",
+      "yesterday": "昨天",
+      "confirmDelete": "确定删除此会话吗？",
+      "deleteDialog": {
+        "title": "删除聊天",
+        "message": "删除 \"{{title}}\"？此操作无法撤销。"
+      },
+      "renameDialog": {
+        "title": "重命名聊天",
+        "description": "为此会话输入新名称。",
+        "placeholder": "聊天名称"
+      }
+    },
+    "contextMenu": {
+      "rename": "重命名",
+      "delete": "删除"
+    },
+    "interface": {
+      "noConversation": "未选择会话",
+      "selectOrCreate": "选择现有会话或创建新会话",
+      "startConversation": "开始对话",
+      "selectModel": "选择模型",
+      "retry": "重试",
+      "thinking": "思考中...",
+      "placeholder": "输入你的消息...",
+      "assistant": "露娜"
+    },
+    "tokens": {
+      "ariaLabel": "当前上下文 {{current}} / {{max}}",
+      "tooltip": {
+        "title": "Token 使用明细",
+        "input": "本次输入",
+        "output": "本次输出",
+        "lastRequest": "本次上下文",
+        "windowLimit": "窗口限制",
+        "cumulative": "会话总计"
+      }
+    },
+    "toolErrors": {
+      "incompleteTool": "工具调用 \"{{toolType}}\" 未完成，请重试。",
+      "timeout": "工具调用 \"{{toolType}}\" 超时，请重试。",
+      "retryHint": "如果问题持续存在，请检查网络连接或联系技术支持。"
+    },
+    "toolApproval": {
+      "states": {
+        "pending": {
+          "title": "确认执行命令",
+          "badge": "需要确认"
+        },
+        "rejected": {
+          "title": "您拒绝了此命令执行"
+        },
+        "success": {
+          "title": "命令执行成功"
+        },
+        "error": {
+          "title": "命令执行失败"
+        },
+        "completed": {
+          "title": "命令执行完成"
+        }
+      },
+      "fields": {
+        "reason": "执行理由",
+        "command": "将要执行的命令"
+      },
+      "actions": {
+        "deny": "拒绝",
+        "approve": "同意执行"
+      },
+      "warnings": {
+        "executionWarning": "此操作将在远程服务器上执行命令，可能影响服务器运行。请确认命令正确无误后再执行。"
+      },
+      "output": {
+        "errorOutput": "错误输出",
+        "error": "错误"
+      },
+      "expandOutput": "展开输出",
+      "collapseOutput": "折叠输出",
+      "outputLines": "输出 {{count}} 行",
+      "quickOptions": {
+        "title": "快捷选项",
+        "none": "仅此次执行",
+        "command": "此会话中始终允许此命令",
+        "server": "此会话中始终允许在此服务器执行"
+      }
+    }
+  },
+  "monitor": {
+    "title": "服务器监控",
+    "tabs": {
+      "overview": "概览",
+      "processes": "进程",
+      "network": "网络",
+      "disk": "磁盘"
+    },
+    "error": {
+      "invalidParams": "参数无效",
+      "invalidParamsDesc": "缺少必要的会话参数。请从 SSH 终端打开此窗口。"
+    },
+    "placeholder": {
+      "overview": "概览数据加载中...",
+      "processes": "进程数据加载中...",
+      "network": "网络数据加载中...",
+      "disk": "磁盘数据加载中..."
+    },
+    "overview": {
+      "uptime": "运行时长",
+      "memory": "内存",
+      "disk": "磁盘",
+      "load": "系统负载",
+      "networkTraffic": "网络流量",
+      "currentUpload": "上传",
+      "currentDownload": "下载"
+    },
+    "processes": {
+      "memoryRanking": "内存占用",
+      "cpuRanking": "CPU 占用",
+      "top10Memory": "内存占用 Top 10",
+      "top10Cpu": "CPU 占用 Top 10",
+      "rank": "排名",
+      "name": "进程名称",
+      "pid": "PID",
+      "user": "用户",
+      "usage": "占用率"
+    },
+    "network": {
+      "uploadRate": "上传速率",
+      "downloadRate": "下载速率",
+      "trafficTrend": "流量趋势（近 5 分钟）",
+      "connections": "活跃连接"
+    },
+    "disk": {
+      "mountPoint": "挂载点",
+      "filesystem": "文件系统",
+      "type": "类型",
+      "used": "已用",
+      "available": "可用"
+    },
+    "buttons": {
+      "dashboard": "监控面板",
+      "dashboardTooltip": "打开服务器监控"
+    }
+  },
+  "tool": {
+    "group": {
+      "ssh": "SSH 管理",
+      "ssh.description": "远程服务器连接和命令执行",
+      "utility": "实用工具",
+      "utility.description": "计算器、文件操作等实用功能",
+      "system": "系统操作",
+      "system.description": "系统信息、进程管理等"
+    },
+    "listSSHServers": {
+      "name": "SSH 服务器列表",
+      "description": "查询已配置的 SSH 服务器"
+    },
+    "executeCommand": {
+      "name": "执行命令",
+      "description": "在远程服务器执行 shell 命令，使用 PTY 流式模式，支持条件自动停止和交互式 sudo 密码输入"
+    },
+    "calculateExpression": {
+      "name": "计算器",
+      "description": "计算数学表达式"
+    },
+    "getCurrentTime": {
+      "name": "获取当前时间",
+      "description": "获取当前准确的日期和时间，支持时区转换"
+    }
+  },
+  "skills": {
+    "title": "专业技能",
+    "subtitle": "管理和配置 AI Agent 的专业技能",
+    "reset": "重置为预置",
+    "import": "导入",
+    "exportAll": "导出全部",
+    "create": "创建",
+    "total": "共 {{count}} 个技能",
+    "active": "已激活 {{count}} 个",
+    "empty": "暂无技能，点击「创建」添加第一个技能"
+  },
+  "skillSelector": {
+    "none": "技能",
+    "count": "{{count}} 个技能",
+    "title": "专业技能",
+    "settings": "管理",
+    "empty": "暂无可用技能",
+    "hint": "激活的技能将为 AI 提供专业指导"
+  },
+  "presetSkills": {
+    "sshOperations": {
+      "name": "SSH 运维专家",
+      "description": "SSH 服务器运维操作技能。当需要执行远程命令、查看服务器状态、管理文件时使用。"
+    },
+    "logAnalysis": {
+      "name": "日志分析大师",
+      "description": "分析系统日志、识别错误模式、生成报告。当用户提到日志、log、错误分析、排查问题时使用。"
+    },
+    "dockerManagement": {
+      "name": "Docker 管理器",
+      "description": "Docker 容器生命周期管理、镜像操作、网络配置。当用户提到 Docker、容器、container、镜像时使用。"
+    },
+    "systemMonitoring": {
+      "name": "系统监控",
+      "description": "系统资源监控、性能分析、告警配置。当用户提到监控、CPU、内存、磁盘、性能时使用。"
+    },
+    "deployment": {
+      "name": "应用部署",
+      "description": "应用部署和发布流程管理。当用户提到部署、deploy、发布、上线、CI/CD 时使用。"
+    },
+    "securityAudit": {
+      "name": "安全审计",
+      "description": "安全审计和漏洞检查。当用户提到安全、审计、漏洞、安全检查、渗透测试时使用。"
+    }
+  }
+}

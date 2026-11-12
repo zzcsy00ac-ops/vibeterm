@@ -1,0 +1,151 @@
+/**
+ * SkillSelector 组件样式
+ */
+
+.skill-selector-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--gray-6);
+  border-radius: var(--radius-2);
+  background: var(--gray-2);
+  color: var(--gray-11);
+  font-size: var(--font-size-2);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.skill-selector-trigger:hover {
+  border-color: var(--gray-7);
+  background: var(--gray-3);
+}
+
+.skill-selector-trigger:focus-visible {
+  outline: none;
+  border-color: var(--accent-8);
+  box-shadow: 0 0 0 2px var(--accent-4);
+}
+
+.skill-selector-text {
+  white-space: nowrap;
+}
+
+.skill-selector-badge {
+  margin-left: var(--space-1);
+}
+
+/* Popover 内容 */
+.skill-selector-content {
+  background: var(--gray-2);
+  border: 1px solid var(--gray-6);
+  border-radius: var(--radius-3);
+  padding: var(--space-3);
+  min-width: 280px;
+  max-width: 320px;
+  box-shadow: var(--shadow-5);
+  z-index: var(--z-popover);
+}
+
+.skill-selector-header {
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--gray-5);
+}
+
+.skill-selector-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  border: none;
+  border-radius: var(--radius-1);
+  background: transparent;
+  color: var(--gray-10);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.skill-selector-settings:hover {
+  background: var(--gray-4);
+  color: var(--gray-11);
+}
+
+/* Skill 列表 */
+.skill-selector-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  max-height: 300px;
+  overflow-y: auto;
+  padding: var(--space-1) 0;
+}
+
+.skill-selector-empty {
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.skill-selector-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.skill-selector-item:hover {
+  background: var(--gray-4);
+}
+
+.skill-selector-item.active {
+  background: var(--accent-3);
+}
+
+.skill-selector-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.skill-selector-item-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+}
+
+/* 提示 */
+.skill-selector-hint {
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--gray-5);
+}
+
+/* 箭头 */
+.skill-selector-arrow {
+  fill: var(--gray-6);
+}
+
+/* 滚动条样式 */
+.skill-selector-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.skill-selector-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.skill-selector-list::-webkit-scrollbar-thumb {
+  background: var(--gray-6);
+  border-radius: var(--radius-1);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skill-selector-trigger,
+  .skill-selector-item,
+  .skill-selector-settings {
+    transition: none;
+  }
+}

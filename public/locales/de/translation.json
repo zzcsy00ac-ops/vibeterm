@@ -1,0 +1,630 @@
+{
+  "common": {
+    "buttons": {
+      "cancel": "Abbrechen",
+      "confirm": "Bestätigen",
+      "delete": "Löschen",
+      "save": "Speichern",
+      "ok": "OK",
+      "create": "Erstellen",
+      "add": "Hinzufügen",
+      "close": "Schließen"
+    },
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen"
+  },
+  "home": {
+    "welcome": "willkommen de"
+  },
+  "app": {
+    "update": "Aktualisieren",
+    "settings": "Einstellungen",
+    "mores": "Mehr",
+    "about": "Über",
+    "logout": "Abmelden",
+    "chats": "Chats",
+    "sshManager": "SSH-Manager",
+    "providerManager": "Modellanbieter",
+    "sidebar": "Seitenleiste"
+  },
+  "empty": {
+    "welcome": "Willkommen",
+    "noTabs": "Keine Tabs offen",
+    "message": "Wählen Sie links etwas aus, um zu beginnen 🚀",
+    "messages": [
+      "Bereit für ein Abenteuer? 🎯",
+      "Alles bereit, wartet darauf, dass Sie es erkunden ✨",
+      "Neuer Tag, neue Anfänge! ☀️",
+      "Leere Leinwand, wartet auf Ihre Kreation 🎨",
+      "Ihre Reise beginnt hier 🗺️",
+      "Was möchten Sie heute tun? 💡",
+      "Nicht schüchtern, klicken Sie auf etwas 😊",
+      "Ein bisschen leer hier, wollen Sie etwas Würze hinzufügen? 🍳",
+      "Nichts passiert... vorerst 😴",
+      "Zu ruhig, lass uns etwas Lärm machen 🔊",
+      "Die Möglichkeiten sind endlos 🌈",
+      "Der erste Tab ist immer besonders ⭐",
+      "Von Null auf Eins, nur einen Klick entfernt 🚀",
+      "Leer ist schön, aber mehr ist mehr Spaß 🎭",
+      "Ihr Arbeitsbereich, Ihre Regeln 📝",
+      "Willkommen zurück! Bereit zu starten? 👋",
+      "Schön, dich zu sehen! ☺️",
+      "Ein weiterer Tag voller Möglichkeiten 🌟",
+      "Lass uns etwas bewegen 💪",
+      "Die Zeit ist jetzt ⏰",
+      "Lass uns gehen! ▶️",
+      "Sie sind Chef 👑",
+      "Handeln 🏃",
+      "Machen Sie es fantastisch ✨",
+      "Warten auf Ihren Befehl 📡"
+    ]
+  },
+  "ssh": {
+    "sessions": "SSH-Sitzungen",
+    "sudo": {
+      "title": "Sudo-Authentifizierung erforderlich",
+      "securityLocal": "Lokale Verarbeitung - Ihr Passwort verlässt dieses Gerät niemals",
+      "securityEncrypted": "Ende-zu-Ende-verschlüsselt über SSH-Protokoll",
+      "securityNoAI": "KI-isoliert - Niemals an externe Dienste übertragen",
+      "host": "Host",
+      "user": "Benutzer",
+      "command": "Befehl",
+      "passwordLabel": "Sudo-Passwort",
+      "submit": "Authentifizieren",
+      "cancel": "Abbrechen",
+      "saveCheckbox": "Passwort 1 Stunde merken",
+      "saveHint": "Passwort sicher im System-Schlüsselbund gespeichert"
+    },
+    "contextMenu": {
+      "createGroup": "Gruppe erstellen",
+      "createSubgroup": "Untergruppe erstellen",
+      "createProfile": "SSH-Profil erstellen",
+      "rename": "Umbenennen",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "expandAll": "Alle erweitern",
+      "collapseAll": "Alle reduzieren"
+    },
+    "dialogs": {
+      "createGroup": "Gruppe erstellen",
+      "createSubgroup": "Untergruppe erstellen",
+      "createProfile": "Neues SSH-Profil",
+      "editProfile": "SSH-Profil bearbeiten",
+      "renameGroup": "Gruppe umbenennen",
+      "deleteConfirmTitle": "Löschen bestätigen",
+      "deleteGroupConfirm": "Möchten Sie die Gruppe \"{{name}}\" wirklich löschen? Dies wird auch alle Untergruppen und SSH-Profile in dieser Gruppe löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "deleteProfileConfirm": "Möchten Sie das SSH-Profil \"{{name}}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden."
+    },
+    "sidebar": {
+      "name": "Name",
+      "group": "Gruppe",
+      "icon": "Symbol",
+      "noGroup": "Keine Gruppe",
+      "noIcon": "Kein Symbol",
+      "selectGroup": "Gruppe auswählen oder erstellen",
+      "selectIcon": "Symbol auswählen",
+      "namePlaceholder": "z.B. Produktionsserver",
+      "required": "Erforderlich"
+    },
+    "icons": {
+      "server": "Server",
+      "database": "Datenbank",
+      "cloud": "Cloud",
+      "network": "Netzwerk",
+      "development": "Entwicklung",
+      "production": "Produktion",
+      "staging": "Staging",
+      "backup": "Backup"
+    },
+    "form": {
+      "connectionMode": "Verbindungsmodus",
+      "host": "Host",
+      "port": "Port",
+      "username": "Benutzername",
+      "authType": "Auth-Typ",
+      "password": "Passwort",
+      "unassigned": "Nicht zugeordnet",
+      "groupName": "Gruppenname",
+      "groupNamePlaceholder": "z.B. Produktion, Entwicklung",
+      "newGroupName": "Neuer Gruppenname"
+    },
+    "placeholders": {
+      "host": "example.com oder 192.168.1.1",
+      "port": "22",
+      "username": "Leer lassen, um beim Verbinden zu fragen",
+      "password": "Passwort eingeben"
+    },
+    "connectionModes": {
+      "direct": "Direkt",
+      "jumpHost": "Jump Host",
+      "socksProxy": "SOCKS-Proxy",
+      "httpProxy": "HTTP-Proxy"
+    },
+    "authTypes": {
+      "auto": "Auto",
+      "password": "Passwort",
+      "key": "Schlüssel",
+      "agent": "Agent",
+      "keyboardInteractive": "Tastatur-Interaktiv"
+    },
+    "validation": {
+      "nameRequired": "Name ist erforderlich",
+      "hostRequired": "Hostadresse ist erforderlich",
+      "hostInvalid": "Ungültiges Host-Format (Domäne, IPv4 oder localhost unterstützt)"
+    },
+    "buttons": {
+      "cancel": "Abbrechen",
+      "create": "Erstellen",
+      "save": "Speichern",
+      "confirm": "Bestätigen",
+      "rename": "Umbenennen",
+      "delete": "Löschen"
+    },
+    "passwordPrompt": {
+      "title": "SSH-Authentifizierung",
+      "enterPasswordFor": "Passwort eingeben für <strong>{{user}}@{{host}}</strong>",
+      "passwordLabel": "Passwort",
+      "passwordPlaceholder": "Passwort eingeben",
+      "savePasswordToKeychain": "Passwort im Schlüsselbund speichern",
+      "cancel": "Abbrechen",
+      "connect": "Verbinden",
+      "connecting": "Verbinde..."
+    },
+    "keychain": {
+      "passwordNotFound": "Passwort nicht im Schlüsselbund gefunden",
+      "getPasswordFailed": "Passwort konnte nicht aus dem Schlüsselbund abgerufen werden"
+    },
+    "privateKey": {
+      "addKey": "Privaten Schlüssel hinzufügen...",
+      "passphraseHint": "Wenn Ihr privater Schlüssel mit einer Passphrase geschützt ist, werden Sie beim Verbinden aufgefordert, diese einzugeben."
+    },
+    "keyPassphrasePrompt": {
+      "title": "SSH-Schlüssel-Passphrase",
+      "enterPassphraseFor": "Passphrase für privaten Schlüssel eingeben:",
+      "passphraseLabel": "Passphrase",
+      "passphrasePlaceholder": "Passphrase eingeben",
+      "saveToKeychain": "Passphrase im Schlüsselbund speichern",
+      "cancel": "Abbrechen",
+      "connect": "Verbinden",
+      "connecting": "Verbinde..."
+    }
+  },
+  "provider": {
+    "list": "Modellanbieter",
+    "ungrouped": "Unkategorisiert",
+    "contextMenu": {
+      "createCategory": "Kategorie erstellen",
+      "addProvider": "Anbieter hinzufügen",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "rename": "Umbenennen",
+      "duplicate": "Duplizieren",
+      "expandAll": "Alle erweitern",
+      "collapseAll": "Alle reduzieren"
+    },
+    "dialogs": {
+      "addProvider": "Anbieter hinzufügen",
+      "editProvider": "Anbieter bearbeiten",
+      "createCategory": "Kategorie erstellen",
+      "renameCategory": "Kategorie umbenennen",
+      "deleteConfirmTitle": "Löschen bestätigen",
+      "deleteCategoryConfirm": "Möchten Sie die Kategorie \"{{name}}\" wirklich löschen? Dies wird auch alle Anbieter in dieser Kategorie löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "deleteProviderConfirm": "Möchten Sie den Anbieter \"{{name}}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden."
+    },
+    "form": {
+      "providerName": "Anbietername",
+      "officialUrl": "Offizielle Website",
+      "apiKey": "API-Schlüssel",
+      "requestUrl": "API-Endpunkt",
+      "apiType": "API-Typ",
+      "models": "Modelle",
+      "addModel": "Modell hinzufügen",
+      "categoryName": "Kategoriename",
+      "categoryNamePlaceholder": "z.B. Produktion, Entwicklung"
+    },
+    "model": {
+      "addTitle": "Modell hinzufügen",
+      "modelId": "Modell-ID",
+      "modelIdPlaceholder": "z.B. gpt-4, claude-3-opus",
+      "displayName": "Anzeigename",
+      "displayNamePlaceholder": "Optional, standardmäßig Modell-ID",
+      "optional": "Optional",
+      "enabledByDefault": "Standardmäßig aktivieren",
+      "empty": "Keine Modelle konfiguriert",
+      "removeModel": "Modell entfernen"
+    },
+    "validation": {
+      "nameRequired": "Anbietername ist erforderlich",
+      "apiKeyRequired": "API-Schlüssel ist erforderlich",
+      "requestUrlRequired": "API-Endpunkt ist erforderlich",
+      "atLeastOneModel": "Bitte fügen Sie mindestens ein Modell hinzu"
+    },
+    "apiTypes": {
+      "openai": "OpenAI-kompatibel",
+      "anthropic": "Anthropic",
+      "ollama": "Ollama"
+    }
+  },
+  "terminal": {
+    "status": {
+      "disconnected": "Getrennt",
+      "connecting": "Verbinde...",
+      "connected": "Verbunden",
+      "reconnecting": "Neu verbinden...",
+      "error": "Verbindungsfehler"
+    },
+    "buttons": {
+      "disconnect": "Trennen",
+      "reconnect": "Neu verbinden",
+      "reconnecting": "Neu verbinden...",
+      "disconnectTooltip": "Verbindung trennen",
+      "reconnectTooltip": "Neu verbinden",
+      "openSFTP": "Dateimanager öffnen",
+      "sftp": "Dateien"
+    },
+    "upload": {
+      "uploading": "{{count}} Dateien werden hochgeladen...",
+      "uploadingFile": "{{file}} wird hochgeladen... ({{current}}/{{total}})",
+      "partialFailure": "{{completed}} hochgeladen, {{failed}} fehlgeschlagen",
+      "allFailed": "{{count}} Uploads fehlgeschlagen",
+      "clickToView": "Klicken zum Anzeigen",
+      "errorTitle": "Upload fehlgeschlagen",
+      "errorIntro": "Folgende Dateien konnten nicht hochgeladen werden:",
+      "retryFailed": "Fehlgeschlagene wiederholen",
+      "skipAll": "Alle überspringen"
+    }
+  },
+  "sftp": {
+    "title": "Dateimanager",
+    "toolbar": {
+      "goUp": "Nach oben",
+      "refresh": "Aktualisieren",
+      "toggleFilter": "Filter",
+      "createDirectory": "Neues Verzeichnis",
+      "selectFiles": "Dateien auswählen",
+      "upload": "Dateien hochladen",
+      "close": "Schließen"
+    },
+    "createDir": {
+      "title": "Neuer Ordner",
+      "nameLabel": "Ordnername",
+      "placeholder": "Ordnernamen eingeben...",
+      "create": "Erstellen",
+      "creating": "Erstellen...",
+      "nameRequired": "Ordnername ist erforderlich",
+      "invalidName": "Ordnername darf keine Sonderzeichen enthalten (\\/\\:*?\"<>|)"
+    },
+    "filter": {
+      "placeholder": "Dateien filtern...",
+      "clear": "Filter löschen"
+    },
+    "fileItem": {
+      "permission": "Berechtigung",
+      "size": "Größe",
+      "modified": "Geändert"
+    },
+    "fileList": {
+      "loading": "Laden...",
+      "empty": "Leeres Verzeichnis",
+      "rootEmpty": "Root-Verzeichnis ist leer",
+      "noResults": "Keine passenden Dateien gefunden",
+      "tryDifferentFilter": "Versuchen Sie einen anderen Filter",
+      "dragToUpload": "Dateien hierher ziehen zum Hochladen",
+      "dropFiles": "Dateien hier ablegen zum Hochladen",
+      "header": {
+        "name": "Name",
+        "permission": "Berechtigung",
+        "size": "Größe",
+        "modified": "Geändert"
+      }
+    },
+    "contextMenu": {
+      "open": "Ordner öffnen",
+      "download": "Herunterladen",
+      "rename": "Umbenennen",
+      "renamePrompt": "Neuen Namen eingeben",
+      "delete": "Löschen",
+      "copyPath": "Pfad kopieren",
+      "properties": "Eigenschaften"
+    },
+    "delete": {
+      "title": "Löschen bestätigen",
+      "confirm": "Möchten Sie \"{{name}}\" wirklich löschen?",
+      "warning": "Diese Aktion kann nicht rückgängig gemacht werden"
+    },
+    "progress": {
+      "close": "Schließen"
+    },
+    "upload": {
+      "status": {
+        "pending": "Ausstehend",
+        "uploading": "Hochladen",
+        "completed": "Abgeschlossen",
+        "failed": "Fehlgeschlagen",
+        "cancelled": "Abgebrochen"
+      },
+      "clearCompleted": "Abgeschlossene löschen",
+      "cancel": "Abbrechen",
+      "retry": "Wiederholen",
+      "resume": "Fortsetzen",
+      "queueStatus": {
+        "uploading": "Hochladen: {{count}}",
+        "queued": "In Warteschlange: {{count}}"
+      },
+      "overwrite": {
+        "title": "Überschreiben bestätigen",
+        "confirm": "Die Datei \"{{name}}\" existiert bereits. Möchten Sie sie überschreiben?"
+      }
+    },
+    "download": {
+      "status": {
+        "downloading": "Herunterladen",
+        "completed": "Abgeschlossen",
+        "failed": "Fehlgeschlagen"
+      },
+      "clearCompleted": "Abgeschlossene löschen"
+    }
+  },
+  "connectionTest": {
+    "fillRequired": "Bitte Hostadresse und Benutzernamen eingeben",
+    "success": "Erfolgreich verbunden!",
+    "failed": "Verbindung fehlgeschlagen",
+    "testing": "Teste...",
+    "testButton": "Verbindung testen",
+    "connecting": "Verbinde...",
+    "saveAndConnect": "Speichern und verbinden"
+  },
+  "settingsValidation": {
+    "invalidThemeMode": "Bitte wählen Sie einen gültigen Themenmodus",
+    "invalidLanguage": "Bitte wählen Sie eine gültige Sprache"
+  },
+  "settings": {
+    "nav": {
+      "general": "Allgemein",
+      "appearance": "Darstellung",
+      "data": "Daten",
+      "contact": "Kontakt"
+    },
+    "contact": {
+      "description": "Kontaktieren Sie uns für Feedback und Support",
+      "thankYou": "Vielen Dank für die Nutzung unseres Produkts!",
+      "continuousUpdate": "Wir werden kontinuierlich Updates bereitstellen, um Ihnen eine bessere Erfahrung zu bieten.",
+      "scanQrCode": "Scannen Sie, um unserer {{platform}}-Community beizutreten",
+      "communityMessage": "Verbinden Sie sich mit uns und teilen Sie Ihr Feedback",
+      "feedbackMessage": "Wir freuen uns über Ihre Vorschläge und Ihr Feedback zur Verbesserung."
+    },
+    "appearance": {
+      "title": "Darstellungseinstellungen",
+      "description": "Passen Sie das Aussehen und Verhalten der App an",
+      "themeMode": "Themenmodus",
+      "themeModeDescription": "Wählen Sie Ihr bevorzugtes Themenaussehen"
+    },
+    "general": {
+      "title": "Allgemeine Einstellungen",
+      "description": "Verwalten Sie Ihre App-Präferenzen",
+      "language": "Sprache",
+      "languageDescription": "Wählen Sie Ihre bevorzugte Sprache",
+      "languageOption": {
+        "auto": "Auto",
+        "en": "English",
+        "cn": "中文"
+      }
+    },
+    "data": {
+      "title": "Dateneinstellungen",
+      "description": "Datenimport und -export verwalten",
+      "export": {
+        "title": "Daten exportieren",
+        "description": "Laden Sie alle Ihre Anwendungsdaten als Sicherungsdatei herunter",
+        "button": "Backup exportieren"
+      },
+      "import": {
+        "title": "Daten importieren",
+        "description": "Stellen Sie Anwendungsdaten aus einer Sicherungsdatei wieder her",
+        "button": "Backup importieren",
+        "dialogTitle": "Backup importieren",
+        "dialogDescription": "Wählen Sie, wie Sie mit vorhandenen Daten verfahren möchten:",
+        "replaceButton": "Vorhandene ersetzen",
+        "mergeButton": "Mit vorhandenen zusammenführen",
+        "warning": "Warnung: Ersetzen entfernt alle vorhandenen Daten vor dem Import."
+      },
+      "status": {
+        "success": "Erfolg",
+        "error": "Fehler",
+        "exporting": "Daten werden exportiert...",
+        "importing": "Daten werden importiert...",
+        "validating": "Backup wird überprüft..."
+      },
+      "validation": {
+        "backupInfo": "Backup-Informationen",
+        "stores": "Datenspeicher",
+        "version": "Version",
+        "date": "Erstellt",
+        "includedStores": "Enthaltene Daten:"
+      },
+      "info": {
+        "title": "Über Datenbackup",
+        "content": "Backup-Dateien enthalten alle Ihre Anwendungsdaten einschließlich Einstellungen, Anbieter, Chat-Verlauf und SSH-Profile. Bewahren Sie sie sicher auf und geben Sie sie niemals an andere weiter."
+      },
+      "error": {
+        "zipContents": "Gefundene Dateien im ZIP:",
+        "suggestions": "Vorschläge:",
+        "copyDetails": "Fehlerdetails kopieren"
+      }
+    },
+    "selectPlaceholder": "Wählen Sie eine Option",
+    "themeMode_system": "System",
+    "themeMode_light": "Hell",
+    "themeMode_dark": "Dunkel"
+  },
+  "chat": {
+    "newChat": {
+      "defaultTitle": "Neuer Chat"
+    },
+    "ephemeral": {
+      "title": "Temporärer Chat",
+      "shortTitle": "Temp",
+      "warning": "Nachrichten in diesem Chat werden nicht gespeichert. Beim Schließen wird der Chat geleert.",
+      "tooltip": "Temporären Chat starten (nicht gespeichert)"
+    },
+    "tools": {
+      "label": "Tools",
+      "title": "Tools auswählen",
+      "searchPlaceholder": "Tools durchsuchen...",
+      "selectAll": "Alle auswählen",
+      "clearAll": "Alle löschen",
+      "noResults": "Keine passenden Tools gefunden",
+      "selectedCount": "{{current}} / {{total}} ausgewählt"
+    },
+    "sidebar": {
+      "title": "Chats",
+      "newChat": "Neuer Chat",
+      "empty": "Noch keine Unterhaltungen",
+      "yesterday": "Gestern",
+      "confirmDelete": "Diese Unterhaltung wirklich löschen?",
+      "deleteDialog": {
+        "title": "Chat löschen",
+        "message": "\"{{title}}\" löschen? Diese Aktion kann nicht rückgängig gemacht werden."
+      },
+      "renameDialog": {
+        "title": "Chat umbenennen",
+        "description": "Geben Sie einen neuen Namen für diese Unterhaltung ein.",
+        "placeholder": "Chat-Name"
+      }
+    },
+    "contextMenu": {
+      "rename": "Umbenennen",
+      "delete": "Löschen"
+    },
+    "interface": {
+      "noConversation": "Keine Unterhaltung ausgewählt",
+      "selectOrCreate": "Wählen Sie eine vorhandene Unterhaltung aus oder erstellen Sie eine neue",
+      "startConversation": "Unterhaltung starten",
+      "selectModel": "Modell auswählen",
+      "retry": "Wiederholen",
+      "thinking": "Denken...",
+      "placeholder": "Geben Sie Ihre Nachricht ein...",
+      "assistant": "Luuna"
+    },
+    "toolErrors": {
+      "incompleteTool": "Tool-Aufruf \"{{toolType}}\" unvollständig. Bitte wiederholen.",
+      "timeout": "Tool-Aufruf \"{{toolType}}\" timeout. Bitte wiederholen.",
+      "retryHint": "Wenn das Problem weiterhin besteht, überprüfen Sie Ihre Netzwerkverbindung oder wenden Sie sich an den Support."
+    },
+    "toolApproval": {
+      "states": {
+        "pending": {
+          "title": "Befehlsausführung bestätigen",
+          "badge": "Genehmigung erforderlich"
+        },
+        "rejected": {
+          "title": "Sie haben diesen Befehl abgelehnt"
+        },
+        "success": {
+          "title": "Befehl erfolgreich ausgeführt"
+        },
+        "error": {
+          "title": "Befehlsausführung fehlgeschlagen"
+        },
+        "completed": {
+          "title": "Befehlsausführung abgeschlossen"
+        }
+      },
+      "fields": {
+        "reason": "Grund für Ausführung",
+        "command": "Auszuführender Befehl"
+      },
+      "actions": {
+        "deny": "Ablehnen",
+        "approve": "Genehmigen"
+      },
+      "warnings": {
+        "executionWarning": "Dieser Vorgang führt einen Befehl auf dem Remote-Server aus, was den Serverbetrieb beeinträchtigen kann. Bitte bestätigen Sie, dass der Befehl korrekt ist, bevor Sie ihn ausführen."
+      },
+      "output": {
+        "errorOutput": "Fehlerausgabe",
+        "error": "Fehler"
+      },
+      "expandOutput": "Ausgabe erweitern",
+      "collapseOutput": "Ausgabe einklappen",
+      "outputLines": "{{count}} Zeilen",
+      "quickOptions": {
+        "title": "Schnelloptionen",
+        "none": "Nur diesmal ausführen",
+        "command": "Diesen Befehl in dieser Sitzung immer erlauben",
+        "server": "Befehle auf diesem Server in dieser Sitzung immer erlauben"
+      }
+    }
+  },
+  "tool": {
+    "group": {
+      "ssh": "SSH-Verwaltung",
+      "ssh.description": "Remote-Server-Verbindung und Befehlsausführung",
+      "utility": "Dienstprogramme",
+      "utility.description": "Rechner, Dateioperationen und andere Dienstprogramme",
+      "system": "Systemoperationen",
+      "system.description": "Systeminformationen, Prozessverwaltung usw."
+    },
+    "listSSHServers": {
+      "name": "SSH-Serverliste",
+      "description": "Konfigurierte SSH-Server abfragen"
+    },
+    "executeCommand": {
+      "name": "Befehl ausführen",
+      "description": "Shell-Befehle auf Remote-Servern mit PTY-Streaming-Modus ausführen, unterstützt bedingtes automatisches Stoppen und interaktive Sudo-Passworteingabe"
+    },
+    "calculateExpression": {
+      "name": "Rechner",
+      "description": "Mathematische Ausdrücke berechnen"
+    },
+    "getCurrentTime": {
+      "name": "Aktuelle Zeit abrufen",
+      "description": "Ruft die aktuelle genaue Uhrzeit und das Datum ab, unterstützt Zeitzonenkonvertierung"
+    }
+  },
+  "skills": {
+    "title": "Fachfähigkeiten",
+    "subtitle": "KI-Fähigkeiten des AI-Agent verwalten und konfigurieren",
+    "reset": "Auf Voreinstellungen zurücksetzen",
+    "import": "Importieren",
+    "exportAll": "Alle exportieren",
+    "create": "Erstellen",
+    "total": "{{count}} Fähigkeiten gesamt",
+    "active": "{{count}} aktiviert",
+    "empty": "Keine Fähigkeiten vorhanden. Klicken Sie auf \"Erstellen\" um die erste hinzuzufügen."
+  },
+  "skillSelector": {
+    "none": "Fähigkeiten",
+    "count": "{{count}} Fähigkeit",
+    "title": "Fachfähigkeiten",
+    "settings": "Verwalten",
+    "empty": "Keine Fähigkeiten verfügbar",
+    "hint": "Aktivierte Fähigkeiten stellen der AI Fachwissen zur Verfügung"
+  },
+  "presetSkills": {
+    "sshOperations": {
+      "name": "SSH-Betriebsexperte",
+      "description": "SSH-Serverbetriebsfähigkeit. Verwenden Sie diese, wenn Sie Remote-Befehle ausführen, den Serverstatus überprüfen oder Dateien verwalten müssen."
+    },
+    "logAnalysis": {
+      "name": "Protokollanalyse-Meister",
+      "description": "Systemprotokolle analysieren, Fehlermuster erkennen und Berichte erstellen. Verwenden Sie diese, wenn Benutzer Protokolle, Fehler oder Fehlerbehebung erwähnen."
+    },
+    "dockerManagement": {
+      "name": "Docker-Manager",
+      "description": "Docker-Container-Lebenszyklusverwaltung, Image-Operationen und Netzwerkkonfiguration. Verwenden Sie diese, wenn Benutzer Docker, Container oder Images erwähnen."
+    },
+    "systemMonitoring": {
+      "name": "Systemüberwachung",
+      "description": "Systemressourcenüberwachung, Leistungsanalyse und Alarmkonfiguration. Verwenden Sie diese, wenn Benutzer Überwachung, CPU, Speicher, Festplatte oder Leistung erwähnen."
+    },
+    "deployment": {
+      "name": "Anwendungsbereitstellung",
+      "description": "Anwendungsbereitstellung und Release-Prozessverwaltung. Verwenden Sie diese, wenn Benutzer Bereitstellung, Release, CI/CD oder Pipelines erwähnen."
+    },
+    "securityAudit": {
+      "name": "Sicherheitsaudit",
+      "description": "Sicherheitsaudit und Schwachstellenprüfung. Verwenden Sie diese, wenn Benutzer Sicherheit, Audit, Schwachstellen oder Penetrationstests erwähnen."
+    }
+  }
+}

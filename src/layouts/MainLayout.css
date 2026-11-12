@@ -1,0 +1,33 @@
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+
+
+.panel-group {
+  width: 100%;
+  height: 100%;
+}
+
+.side-content {
+  height: 100dvh;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  /* 与 SideTools 和 MainContent 保持一致的基础背景 */
+  background: var(--color-surface);
+}
+
+/* light 模式下 SideContent 使用稍深的背景色区分 */
+.theme-light .side-content {
+  background: var(--gray-a3);
+}
+
+/* 深色模式下 SideContent 使用稍浅的背景色区分 */
+.theme-dark .side-content {
+  background: var(--gray-a3);
+}

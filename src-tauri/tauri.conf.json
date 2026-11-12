@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Vibe Terminal",
+  "version": "0.2.1",
+  "identifier": "com.liumeng.vibeterm",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Vibe Terminal",
+        "width": 1600,
+        "height": 900,
+        "minWidth": 900,
+        "minHeight": 800,
+        "decorations": true,
+        "transparent": false,
+        "visible": false,
+        "dragDropEnabled": true
+      }
+
+    ],
+    "security": {
+      "csp": null
+    },
+    "withGlobalTauri": true
+  },
+  "bundle": {
+    "category": "Utility",
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "entitlements": "./Entitlements.plist",
+      "hardenedRuntime": true,
+      "infoPlist": "./Info.plist",
+      "minimumSystemVersion": "12.0"
+    }
+  }
+}

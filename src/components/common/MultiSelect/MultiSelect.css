@@ -1,0 +1,51 @@
+/* MultiSelect 组件样式 */
+
+/* 工具选择器触发按钮 - 与模型选择器对齐 */
+.tool-selector-trigger {
+  background-color: transparent !important;
+  height: 32px;
+  padding: 0 12px;
+}
+
+.tool-selector-trigger:hover {
+  background-color: transparent !important;
+}
+
+.tool-selector-trigger:focus {
+  background-color: transparent !important;
+}
+
+/* ScrollArea 容器 */
+[data-radix-scroll-area-root] {
+  width: 100%;
+}
+
+/* 隐藏原生滚动条 */
+[data-radix-scroll-area-viewport] {
+  scrollbar-width: none; /* Firefox */
+}
+
+[data-radix-scroll-area-viewport]::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Radix ScrollArea 滚动条样式 */
+[data-radix-scroll-area-scrollbar] {
+  transition: background-color 0.2s, opacity 0.2s;
+  z-index: 10;
+}
+
+[data-radix-scroll-area-scrollbar] [data-radix-scroll-area-thumb] {
+  background-color: var(--gray-a7);
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+[data-radix-scroll-area-scrollbar]:hover [data-radix-scroll-area-thumb] {
+  background-color: var(--gray-a9);
+}
+
+[data-radix-scroll-area-scrollbar][data-state="hidden"] {
+  opacity: 0;
+  pointer-events: none;
+}

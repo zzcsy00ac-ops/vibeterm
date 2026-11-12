@@ -1,0 +1,88 @@
+/**
+ * StreamingCommandOutput 样式
+ *
+ * 流式命令输出显示组件样式
+ */
+
+.streaming-output {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.streaming-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--gray-a3);
+  border-bottom: 1px solid var(--gray-a6);
+}
+
+.streaming-output-header .command {
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 12px;
+  color: var(--gray-11);
+}
+
+.streaming-output-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.streaming-output-header .status-running {
+  font-size: 12px;
+  color: var(--accent-11);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.streaming-output-header .close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  color: var(--gray-11);
+  transition: background 0.15s;
+}
+
+.streaming-output-header .close-btn:hover {
+  background: var(--gray-a4);
+}
+
+.streaming-output-body {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 12px;
+  background: var(--gray-a2);
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.output-waiting {
+  color: var(--gray-10);
+}
+
+.output-stdout {
+  color: var(--gray-12);
+}
+
+.output-stderr {
+  color: var(--red-11);
+}
+
+.output-success {
+  color: var(--green-11);
+}
+
+.output-error {
+  color: var(--red-11);
+}

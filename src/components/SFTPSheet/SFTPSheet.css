@@ -1,0 +1,102 @@
+/**
+ * SFTP Sheet 主组件样式
+ */
+
+/* ==================== 背景遮罩 ==================== */
+
+.sftp-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 40;
+  cursor: default;
+}
+
+/* ==================== Sheet 面板 ==================== */
+
+.sftp-sheet {
+  position: fixed;
+  bottom: 0;
+  /* left 和 width 由 JavaScript 动态设置，以匹配 MainContent 区域 */
+  height: 70vh;
+  min-height: 300px;
+  max-height: 90vh;
+  background-color: var(--color-background);
+  border-top: 1px solid var(--accent-a5);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+/* 确保 Dialog 不会阻止拖放事件 */
+[data-radix-portal] > * {
+  pointer-events: auto !important;
+}
+
+/* Radix Dialog Overlay 样式覆盖 */
+[data-radix-dialog-overlay] {
+  pointer-events: auto !important;
+}
+
+/* Radix Dialog Content 样式覆盖 */
+[data-radix-dialog-content] {
+  pointer-events: auto !important;
+}
+
+/* ==================== 拖动手柄 ==================== */
+
+.sftp-sheet__handle {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background-color: var(--color-border-muted);
+  border-radius: 2px;
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.sftp-sheet__handle:active {
+  cursor: grabbing;
+}
+
+/* ==================== 响应式调整 ==================== */
+
+@media (max-width: 768px) {
+  .sftp-sheet {
+    height: 80vh;
+    min-height: 280px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .sftp-sheet__handle {
+    top: 6px;
+    width: 36px;
+    height: 3px;
+  }
+}
+
+/* ==================== 深色模式适配 ==================== */
+
+@media (prefers-color-scheme: dark) {
+  .sftp-sheet {
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ==================== 高对比度模式 ==================== */
+
+@media (prefers-contrast: high) {
+  .sftp-sheet {
+    border-top: 2px solid var(--color-border);
+  }
+
+  .sftp-sheet__handle {
+    background-color: var(--color-text-secondary);
+  }
+}

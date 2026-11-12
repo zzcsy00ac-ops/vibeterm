@@ -1,0 +1,87 @@
+/**
+ * SFTP 传输进度组件样式
+ */
+
+.sftp-transfer-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sftp-transfer-progress__empty {
+  display: none;
+}
+
+.sftp-transfer-progress__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sftp-transfer-progress__icon {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.sftp-transfer-progress__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sftp-transfer-progress__filename {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.sftp-transfer-progress__bar-container {
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sftp-transfer-progress__bar {
+  height: 100%;
+  background: var(--accent-9);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.sftp-transfer-progress__bar--completed {
+  background: var(--color-success);
+}
+
+.sftp-transfer-progress__percentage {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  min-width: 40px;
+  text-align: right;
+}
+
+.sftp-transfer-progress__close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sftp-transfer-progress__close:hover {
+  background: var(--color-hover-bg);
+  color: var(--color-text-primary);
+}

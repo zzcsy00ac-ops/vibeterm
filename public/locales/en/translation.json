@@ -1,0 +1,746 @@
+{
+  "common": {
+    "buttons": {
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "delete": "Delete",
+      "save": "Save",
+      "ok": "OK",
+      "create": "Create",
+      "add": "Add",
+      "close": "Close"
+    },
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "home": {
+    "welcome": "welcome en"
+  },
+  "app": {
+    "update": "Update",
+    "settings": "Settings",
+    "mores": "More",
+    "about": "About",
+    "logout": "Logout",
+    "chats": "Chats",
+    "sshManager": "SSH Manager",
+    "providerManager": "Model Providers",
+    "sidebar": "Sidebar"
+  },
+  "empty": {
+    "welcome": "Welcome",
+    "noTabs": "No tabs open",
+    "message": "Select something from the left to get started 🚀",
+    "messages": [
+      "Ready for an adventure? 🎯",
+      "All set, waiting for you to explore ✨",
+      "New day, new beginnings! ☀️",
+      "Blank canvas, awaiting your creation 🎨",
+      "Your journey starts here 🗺️",
+      "What would you like to do today? 💡",
+      "Don't be shy, click something 😊",
+      "A bit empty here, wanna add some spice? 🍳",
+      "Nothing happening... for now 😴",
+      "Too quiet, let's make some noise 🔊",
+      "Possibilities are infinite 🌈",
+      "The first tab is always special ⭐",
+      "From zero to one, just one click away 🚀",
+      "Blank is beautiful, but more is fun 🎭",
+      "Your workspace, your rules 📝",
+      "Welcome back! Ready to start? 👋",
+      "Good to see you! ☺️",
+      "Another day full of possibilities 🌟",
+      "Let's make something happen 💪",
+      "The time is now ⏰",
+      "Let's go! ▶️",
+      "You're in charge 👑",
+      "Take action 🏃",
+      "Make it amazing ✨",
+      "Awaiting your command 📡"
+    ]
+  },
+  "ssh": {
+    "sessions": "SSH Sessions",
+    "sudo": {
+      "title": "Sudo Authentication Required",
+      "securityLocal": "Processed locally - Your password never leaves this device",
+      "securityEncrypted": "End-to-end encrypted via SSH protocol",
+      "securityNoAI": "AI-isolated - Never transmitted to external services",
+      "host": "Host",
+      "user": "User",
+      "command": "Command",
+      "passwordLabel": "Sudo Password",
+      "submit": "Authenticate",
+      "cancel": "Cancel",
+      "saveCheckbox": "Remember password for 1 hour",
+      "saveHint": "Password stored securely in system keychain"
+    },
+    "contextMenu": {
+      "createGroup": "Create Group",
+      "createSubgroup": "Create Subgroup",
+      "createProfile": "Create SSH Profile",
+      "rename": "Rename",
+      "delete": "Delete",
+      "edit": "Edit",
+      "expandAll": "Expand All",
+      "collapseAll": "Collapse All"
+    },
+    "dialogs": {
+      "createGroup": "Create Group",
+      "createSubgroup": "Create Subgroup",
+      "createProfile": "New SSH Profile",
+      "editProfile": "Edit SSH Profile",
+      "renameGroup": "Rename Group",
+      "deleteConfirmTitle": "Confirm Delete",
+      "deleteGroupConfirm": "Are you sure you want to delete group \"{{name}}\"? This will also delete all subgroups and SSH profiles within this group. This action cannot be undone.",
+      "deleteProfileConfirm": "Are you sure you want to delete SSH profile \"{{name}}\"? This action cannot be undone."
+    },
+    "sidebar": {
+      "name": "Name",
+      "group": "Group",
+      "icon": "Icon",
+      "noGroup": "No Group",
+      "noIcon": "No Icon",
+      "selectGroup": "Select or create group",
+      "selectIcon": "Select icon",
+      "namePlaceholder": "e.g. Production Server",
+      "required": "Required"
+    },
+    "icons": {
+      "server": "Server",
+      "database": "Database",
+      "cloud": "Cloud",
+      "network": "Network",
+      "development": "Development",
+      "production": "Production",
+      "staging": "Staging",
+      "backup": "Backup"
+    },
+    "form": {
+      "connectionMode": "Connection Mode",
+      "host": "Host",
+      "port": "Port",
+      "username": "Username",
+      "authType": "Auth Type",
+      "password": "Password",
+      "unassigned": "Unassigned",
+      "groupName": "Group Name",
+      "groupNamePlaceholder": "e.g. Production, Development",
+      "newGroupName": "New Group Name"
+    },
+    "placeholders": {
+      "host": "example.com or 192.168.1.1",
+      "port": "22",
+      "username": "Leave empty to prompt on connect",
+      "password": "Enter password"
+    },
+    "connectionModes": {
+      "direct": "Direct",
+      "jumpHost": "Jump Host",
+      "socksProxy": "SOCKS Proxy",
+      "httpProxy": "HTTP Proxy"
+    },
+    "authTypes": {
+      "auto": "Auto",
+      "password": "Password",
+      "key": "Key",
+      "agent": "Agent",
+      "keyboardInteractive": "Keyboard Interactive"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "hostRequired": "Host address is required",
+      "hostInvalid": "Invalid host format (supports domain, IPv4, or localhost)"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "create": "Create",
+      "save": "Save",
+      "confirm": "Confirm",
+      "rename": "Rename",
+      "delete": "Delete"
+    },
+    "password": {
+      "setPassword": "Set Password",
+      "forget": "Forget",
+      "savedInKeychain": "Password is saved in keychain",
+      "enterUsernameHostFirst": "Enter username and host first"
+    },
+    "privateKey": {
+      "addKey": "Add a private key...",
+      "passphraseHint": "If your private key is protected with a passphrase, you'll be prompted to enter it when connecting."
+    },
+    "passwordPrompt": {
+      "title": "SSH Authentication",
+      "enterPasswordFor": "Enter password for <strong>{{user}}@{{host}}</strong>",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter password",
+      "savePasswordToKeychain": "Save password to keychain",
+      "cancel": "Cancel",
+      "connect": "Connect",
+      "connecting": "Connecting..."
+    },
+    "keyPassphrasePrompt": {
+      "title": "SSH Key Passphrase",
+      "enterPassphraseFor": "Enter passphrase for private key:",
+      "passphraseLabel": "Passphrase",
+      "passphrasePlaceholder": "Enter passphrase",
+      "saveToKeychain": "Save passphrase to keychain",
+      "cancel": "Cancel",
+      "connect": "Connect",
+      "connecting": "Connecting..."
+    },
+    "keychain": {
+      "passwordNotFound": "Password not found in keychain",
+      "getPasswordFailed": "Failed to get password from keychain"
+    }
+  },
+  "provider": {
+    "list": "Model Providers",
+    "ungrouped": "Uncategorized",
+    "contextMenu": {
+      "createCategory": "Create Category",
+      "addProvider": "Add Provider",
+      "edit": "Edit",
+      "delete": "Delete",
+      "rename": "Rename",
+      "duplicate": "Duplicate",
+      "expandAll": "Expand All",
+      "collapseAll": "Collapse All"
+    },
+    "dialogs": {
+      "addProvider": "Add Provider",
+      "editProvider": "Edit Provider",
+      "createCategory": "Create Category",
+      "renameCategory": "Rename Category",
+      "deleteConfirmTitle": "Confirm Delete",
+      "deleteCategoryConfirm": "Are you sure you want to delete category \"{{name}}\"? This will also delete all providers in this category. This action cannot be undone.",
+      "deleteProviderConfirm": "Are you sure you want to delete provider \"{{name}}\"? This action cannot be undone."
+    },
+    "form": {
+      "providerName": "Provider Name",
+      "officialUrl": "Official Website",
+      "apiKey": "API Key",
+      "requestUrl": "API Endpoint",
+      "apiType": "API Type",
+      "models": "Models",
+      "addModel": "Add Model",
+      "categoryName": "Category Name",
+      "categoryNamePlaceholder": "e.g. Production, Development"
+    },
+    "model": {
+      "addModel": "Add Model",
+      "addTitle": "Add Model",
+      "modelId": "Model ID",
+      "modelIdPlaceholder": "e.g. gpt-4, claude-3-opus",
+      "displayName": "Display Name",
+      "displayNamePlaceholder": "Optional, defaults to model ID",
+      "contextWindow": "Context Window (k)",
+      "contextWindowPlaceholder": "e.g. 128, 200",
+      "optional": "Optional",
+      "enabledByDefault": "Enable by default",
+      "empty": "No models configured",
+      "removeModel": "Remove model"
+    },
+    "validation": {
+      "nameRequired": "Provider name is required",
+      "apiKeyRequired": "API Key is required",
+      "requestUrlRequired": "API endpoint is required",
+      "atLeastOneModel": "Please add at least one model"
+    },
+    "apiTypes": {
+      "openai": "OpenAI Compatible",
+      "anthropic": "Anthropic",
+      "ollama": "Ollama"
+    }
+  },
+  "terminal": {
+    "status": {
+      "disconnected": "Disconnected",
+      "connecting": "Connecting...",
+      "connected": "Connected",
+      "reconnecting": "Reconnecting...",
+      "error": "Connection Error"
+    },
+    "buttons": {
+      "disconnect": "Disconnect",
+      "reconnect": "Reconnect",
+      "reconnecting": "Reconnecting...",
+      "disconnectTooltip": "Disconnect",
+      "reconnectTooltip": "Reconnect",
+      "openSFTP": "Open File Manager",
+      "sftp": "Files"
+    },
+    "upload": {
+      "uploading": "Uploading {{count}} files...",
+      "uploadingFile": "Uploading {{file}}... ({{current}}/{{total}})",
+      "partialFailure": "{{completed}} uploaded, {{failed}} failed",
+      "allFailed": "{{count}} uploads failed",
+      "clickToView": "Click to view",
+      "errorTitle": "Upload Failed",
+      "errorIntro": "The following file(s) failed to upload:",
+      "retryFailed": "Retry Failed",
+      "skipAll": "Skip All"
+    }
+  },
+  "sftp": {
+    "title": "File Manager",
+    "toolbar": {
+      "goUp": "Go Up",
+      "refresh": "Refresh",
+      "toggleFilter": "Filter",
+      "createDirectory": "New Directory",
+      "selectFiles": "Select Files",
+      "upload": "Upload Files",
+      "close": "Close"
+    },
+    "createDir": {
+      "title": "New Folder",
+      "nameLabel": "Folder Name",
+      "placeholder": "Enter folder name...",
+      "create": "Create",
+      "creating": "Creating...",
+      "nameRequired": "Folder name is required",
+      "invalidName": "Folder name cannot contain special characters (\\/\\:*?\"<>|)"
+    },
+    "filter": {
+      "placeholder": "Filter files...",
+      "clear": "Clear filter"
+    },
+    "fileItem": {
+      "permission": "Permission",
+      "size": "Size",
+      "modified": "Modified"
+    },
+    "fileList": {
+      "loading": "Loading...",
+      "empty": "Empty directory",
+      "rootEmpty": "Root directory is empty",
+      "noResults": "No matching files found",
+      "tryDifferentFilter": "Try a different filter",
+      "dragToUpload": "Drag and drop files to upload",
+      "dropFiles": "Drop files to upload",
+      "header": {
+        "name": "Name",
+        "permission": "Permission",
+        "size": "Size",
+        "modified": "Modified"
+      }
+    },
+    "contextMenu": {
+      "open": "Open Folder",
+      "download": "Download",
+      "rename": "Rename",
+      "renamePrompt": "Enter new name",
+      "delete": "Delete",
+      "copyPath": "Copy Path",
+      "properties": "Properties"
+    },
+    "delete": {
+      "title": "Confirm Delete",
+      "confirm": "Are you sure you want to delete \"{{name}}\"?",
+      "warning": "This action cannot be undone"
+    },
+    "progress": {
+      "close": "Close"
+    },
+    "upload": {
+      "status": {
+        "pending": "Pending",
+        "uploading": "Uploading",
+        "completed": "Completed",
+        "failed": "Failed",
+        "cancelled": "Cancelled"
+      },
+      "clearCompleted": "Clear completed",
+      "cancel": "Cancel",
+      "retry": "Retry",
+      "resume": "Resume",
+      "queueStatus": {
+        "uploading": "Uploading: {{count}}",
+        "queued": "Queued: {{count}}"
+      },
+      "overwrite": {
+        "title": "Confirm Overwrite",
+        "confirm": "File \"{{name}}\" already exists. Do you want to overwrite it?"
+      }
+    },
+    "download": {
+      "status": {
+        "downloading": "Downloading",
+        "completed": "Completed",
+        "failed": "Failed"
+      },
+      "clearCompleted": "Clear completed"
+    }
+  },
+  "connectionTest": {
+    "fillRequired": "Please enter host address and username",
+    "success": "Connected successfully!",
+    "failed": "Connection failed",
+    "testing": "Testing...",
+    "testButton": "Test Connection",
+    "connecting": "Connecting...",
+    "saveAndConnect": "Save and Connect"
+  },
+  "settingsValidation": {
+    "invalidThemeMode": "Please select a valid theme mode",
+    "invalidLanguage": "Please select a valid language"
+  },
+  "settings": {
+    "nav": {
+      "general": "General",
+      "appearance": "Appearance",
+      "skills": "Skills",
+      "data": "Data",
+      "contact": "Contact Us"
+    },
+    "contact": {
+      "description": "Get in touch with us for feedback and support",
+      "thankYou": "Thank You for Using Our Product!",
+      "continuousUpdate": "We will continuously update to provide you with a better experience.",
+      "scanQrCode": "Scan to join our {{platform}} community",
+      "communityMessage": "Connect with us and share your feedback",
+      "feedbackMessage": "We welcome your suggestions and feedback to help us improve."
+    },
+    "appearance": {
+      "title": "Appearance Settings",
+      "description": "Customize the app's appearance and behavior",
+      "themeMode": "Theme Mode",
+      "themeModeDescription": "Choose your preferred theme appearance"
+    },
+    "general": {
+      "title": "General Settings",
+      "description": "Manage your app preferences",
+      "language": "Language",
+      "languageDescription": "Choose your preferred language",
+      "languageOption": {
+        "auto": "Auto",
+        "en": "English",
+        "cn": "中文"
+      },
+      "defaultModel": "Default Model",
+      "defaultModelDescription": "Select the default AI model for new conversations",
+      "defaultModelNote": "New conversations will use this model. You can change it per conversation.",
+      "noProviderConfigured": "No model provider configured. Please add a provider first.",
+      "provider": "Provider",
+      "model": "Model",
+      "selectProvider": "Select Provider",
+      "selectModel": "Select Model"
+    },
+    "data": {
+      "title": "Data Settings",
+      "description": "Manage data import and export",
+      "export": {
+        "title": "Export Data",
+        "description": "Download all your application data as a backup file",
+        "button": "Export Backup"
+      },
+      "import": {
+        "title": "Import Data",
+        "description": "Restore application data from a backup file",
+        "button": "Import Backup",
+        "dialogTitle": "Import Backup",
+        "dialogDescription": "Choose how to handle existing data:",
+        "replaceButton": "Replace Existing",
+        "mergeButton": "Merge with Existing",
+        "warning": "Warning: Replace will remove all existing data before importing."
+      },
+      "status": {
+        "success": "Success",
+        "error": "Error",
+        "exporting": "Exporting data...",
+        "importing": "Importing data...",
+        "validating": "Validating backup..."
+      },
+      "validation": {
+        "backupInfo": "Backup Information",
+        "stores": "Data Stores",
+        "version": "Version",
+        "date": "Created",
+        "includedStores": "Included Data:"
+      },
+      "info": {
+        "title": "About Data Backup",
+        "content": "Backup files contain all your application data including settings, providers, chat history, and SSH profiles. Store them securely and never share them with others."
+      },
+      "error": {
+        "zipContents": "Files Found in ZIP:",
+        "suggestions": "Suggestions:",
+        "copyDetails": "Copy Error Details"
+      }
+    },
+    "selectPlaceholder": "Select an option",
+    "themeMode_system": "System",
+    "themeMode_light": "Light",
+    "themeMode_dark": "Dark"
+  },
+  "chat": {
+    "newChat": {
+      "defaultTitle": "New Chat"
+    },
+    "ephemeral": {
+      "title": "Temporary Chat",
+      "shortTitle": "Temp",
+      "warning": "Messages in this chat will not be saved. Closing will clear the conversation.",
+      "tooltip": "Start a temporary chat (not saved)"
+    },
+    "tools": {
+      "label": "Tools",
+      "title": "Select Tools",
+      "searchPlaceholder": "Search tools...",
+      "selectAll": "Select All",
+      "clearAll": "Clear All",
+      "noResults": "No matching tools found",
+      "selectedCount": "{{current}} / {{total}} selected"
+    },
+    "sidebar": {
+      "title": "Chats",
+      "newChat": "New Chat",
+      "empty": "No conversations yet",
+      "yesterday": "Yesterday",
+      "confirmDelete": "Delete this conversation?",
+      "deleteDialog": {
+        "title": "Delete Chat",
+        "message": "Delete \"{{title}}\"? This action cannot be undone."
+      },
+      "renameDialog": {
+        "title": "Rename Chat",
+        "description": "Enter a new name for this conversation.",
+        "placeholder": "Chat name"
+      }
+    },
+    "contextMenu": {
+      "rename": "Rename",
+      "delete": "Delete"
+    },
+    "interface": {
+      "noConversation": "No conversation selected",
+      "selectOrCreate": "Select an existing conversation or create a new one",
+      "startConversation": "Start a conversation",
+      "selectModel": "Select model",
+      "retry": "Retry",
+      "thinking": "Thinking...",
+      "placeholder": "Type your message...",
+      "assistant": "Luuna"
+    },
+    "tokens": {
+      "ariaLabel": "Current context {{current}} / {{max}}",
+      "tooltip": {
+        "title": "Token Usage Details",
+        "input": "This input",
+        "output": "This output",
+        "lastRequest": "Context size",
+        "windowLimit": "Window limit",
+        "cumulative": "Session total"
+      }
+    },
+    "toolErrors": {
+      "incompleteTool": "Tool call \"{{toolType}}\" incomplete. Please retry.",
+      "timeout": "Tool call \"{{toolType}}\" timed out. Please retry.",
+      "retryHint": "If the problem persists, please check your network connection or contact support."
+    },
+    "toolApproval": {
+      "states": {
+        "pending": {
+          "title": "Confirm Command Execution",
+          "badge": "Approval Required"
+        },
+        "rejected": {
+          "title": "You rejected this command"
+        },
+        "success": {
+          "title": "Command executed successfully"
+        },
+        "error": {
+          "title": "Command execution failed"
+        },
+        "completed": {
+          "title": "Command execution completed"
+        }
+      },
+      "fields": {
+        "reason": "Execution reason",
+        "command": "Command to be executed"
+      },
+      "actions": {
+        "deny": "Deny",
+        "approve": "Approve"
+      },
+      "warnings": {
+        "executionWarning": "This operation will execute a command on the remote server, which may affect server operation. Please confirm the command is correct before executing."
+      },
+      "output": {
+        "errorOutput": "Error output",
+        "error": "Error"
+      },
+      "expandOutput": "Expand output",
+      "collapseOutput": "Collapse output",
+      "outputLines": "{{count}} lines",
+      "quickOptions": {
+        "title": "Quick Options",
+        "none": "Execute only this time",
+        "command": "Always allow this command in this session",
+        "server": "Always allow commands on this server in this session"
+      }
+    }
+  },
+  "monitor": {
+    "title": "Server Monitor",
+    "tabs": {
+      "overview": "Overview",
+      "processes": "Processes",
+      "network": "Network",
+      "disk": "Disk"
+    },
+    "error": {
+      "invalidParams": "Invalid Parameters",
+      "invalidParamsDesc": "Missing required session parameters. Please open this window from SSH terminal."
+    },
+    "placeholder": {
+      "overview": "Overview data loading...",
+      "processes": "Process data loading...",
+      "network": "Network data loading...",
+      "disk": "Disk data loading..."
+    },
+    "overview": {
+      "uptime": "Uptime",
+      "memory": "Memory",
+      "disk": "Disk",
+      "load": "Load",
+      "networkTraffic": "Network Traffic",
+      "currentUpload": "Upload",
+      "currentDownload": "Download"
+    },
+    "processes": {
+      "memoryRanking": "Memory Usage",
+      "cpuRanking": "CPU Usage",
+      "top10Memory": "Top 10 Memory Usage",
+      "top10Cpu": "Top 10 CPU Usage",
+      "rank": "Rank",
+      "name": "Process Name",
+      "pid": "PID",
+      "user": "User",
+      "usage": "Usage"
+    },
+    "network": {
+      "uploadRate": "Upload Rate",
+      "downloadRate": "Download Rate",
+      "trafficTrend": "Traffic Trend (Last 5 min)",
+      "connections": "Active Connections"
+    },
+    "disk": {
+      "mountPoint": "Mount Point",
+      "filesystem": "Filesystem",
+      "type": "Type",
+      "used": "Used",
+      "available": "Available"
+    },
+    "buttons": {
+      "dashboard": "Dashboard",
+      "dashboardTooltip": "Open Server Monitor"
+    }
+  },
+  "tool": {
+    "group": {
+      "ssh": "SSH Management",
+      "ssh.description": "Remote server connection and command execution",
+      "utility": "Utilities",
+      "utility.description": "Calculator, file operations and other utilities",
+      "system": "System Operations",
+      "system.description": "System info, process management, etc."
+    },
+    "listSSHServers": {
+      "name": "SSH Server List",
+      "description": "Query configured SSH servers"
+    },
+    "executeCommand": {
+      "name": "Execute Command",
+      "description": "Execute shell commands on remote servers with PTY streaming mode, supports conditional auto-stop and interactive sudo password input"
+    },
+    "calculateExpression": {
+      "name": "Calculator",
+      "description": "Calculate mathematical expressions"
+    },
+    "getCurrentTime": {
+      "name": "Get Current Time",
+      "description": "Get current accurate date and time, supports timezone conversion"
+    }
+  },
+  "skill": {
+    "preset": "Preset",
+    "toggleActive": "Toggle active state",
+    "export": "Export",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete this skill?",
+    "cannotDeletePreset": "Preset skills cannot be deleted",
+    "name": "Name",
+    "namePlaceholder": "e.g., SSH Operations Expert",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe what this skill does and when to use it",
+    "descriptionHint": "AI will use this description to determine when to activate this skill",
+    "triggerKeywords": "Trigger Keywords",
+    "triggerKeywordsPlaceholder": "SSH, remote, server (comma separated)",
+    "triggerKeywordsHint": "When user input contains these keywords, AI may activate this skill",
+    "instructions": "Instructions",
+    "instructionsPlaceholder": "Write detailed instructions in Markdown format...",
+    "instructionsHint": "Supports Markdown format, recommend including 'When to Use' and 'Operation Guide' sections",
+    "createTitle": "Create Skill",
+    "editTitle": "Edit Skill",
+    "validation": {
+      "nameRequired": "Name is required",
+      "descriptionRequired": "Description is required",
+      "instructionsRequired": "Instructions are required"
+    },
+    "importError": "Import failed: {{errors}}",
+    "importSuccess": "Import successful: {{success}} imported, {{skipped}} skipped",
+    "importFailed": "Import failed: {{error}}",
+    "resetConfirm": "Reset to preset skills? This will delete all custom skills."
+  },
+  "skills": {
+    "title": "Professional Skills",
+    "subtitle": "Manage and configure AI Agent's professional skills",
+    "reset": "Reset to Presets",
+    "import": "Import",
+    "exportAll": "Export All",
+    "create": "Create",
+    "total": "{{count}} Skills total",
+    "active": "{{count}} active",
+    "empty": "No skills yet. Click 'Create' to add your first skill."
+  },
+  "skillSelector": {
+    "none": "Skills",
+    "count": "{{count}} Skill",
+    "title": "Professional Skills",
+    "settings": "Manage",
+    "empty": "No skills available",
+    "hint": "Activated skills will provide professional guidance to AI"
+  },
+  "presetSkills": {
+    "sshOperations": {
+      "name": "SSH Operations Expert",
+      "description": "SSH server operations skill. Use when executing remote commands, checking server status, or managing files."
+    },
+    "logAnalysis": {
+      "name": "Log Analysis Master",
+      "description": "Analyze system logs, identify error patterns, and generate reports. Use when users mention logs, errors, or troubleshooting."
+    },
+    "dockerManagement": {
+      "name": "Docker Manager",
+      "description": "Docker container lifecycle management, image operations, and network configuration. Use when users mention Docker, containers, or images."
+    },
+    "systemMonitoring": {
+      "name": "System Monitor",
+      "description": "System resource monitoring, performance analysis, and alert configuration. Use when users mention monitoring, CPU, memory, disk, or performance."
+    },
+    "deployment": {
+      "name": "Application Deployment",
+      "description": "Application deployment and release process management. Use when users mention deploy, release, CI/CD, or pipelines."
+    },
+    "securityAudit": {
+      "name": "Security Audit",
+      "description": "Security auditing and vulnerability checking. Use when users mention security, audit, vulnerabilities, or penetration testing."
+    }
+  }
+}

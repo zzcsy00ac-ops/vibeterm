@@ -1,0 +1,30 @@
+/* Settings 页面 - 使用 Radix UI 组件布局 */
+
+/* 导航链接样式 */
+.settings-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-3);
+  cursor: pointer;
+  transition: background-color 150ms ease;
+  color: var(--color-accent-a11);
+  text-decoration: none;
+}
+
+.settings-nav-link:hover {
+  background-color: var(--color-accent-contrast);
+}
+
+.settings-nav-link.active {
+  background-color: var(--accent-track);
+  color: var(--color-accent-contrast);
+  /* background-color: red; */
+  text-decoration: none;
+
+}
+
+/* 内容区样式 */
+.settings-content {
+  overflow-y: auto;
+}

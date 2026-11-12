@@ -1,0 +1,9 @@
+/* SortableItem 组件样式 */
+
+.sortable-item {
+    display: flex;
+}
+
+.sortable-item.dragging {
+    opacity: 0.5;
+}

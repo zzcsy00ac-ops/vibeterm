@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- App Sandbox（App Store 必需） -->
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+
+	<!-- 网络客户端权限（SSH 连接需要） -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+
+
+	<!-- JIT 编译权限（Tauri WebView 需要） -->
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+
+	<!-- 允许加载动态链接库 -->
+	<key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+	<true/>
+
+	<!-- 允许执行任意可执行内存 -->
+	<key>com.apple.security.cs.disable-executable-page-protection</key>
+	<true/>
+
+	<!-- 任意文件读写（SSH 终端需要） -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,107 @@
+/**
+ * SFTP 文件项组件样式
+ */
+
+.sftp-file-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease;
+  border-radius: 6px;
+  margin: 2px 4px;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.sftp-file-item:hover {
+  background-color: var(--color-hover-bg);
+}
+
+.sftp-file-item--selected {
+  background-color: var(--color-selected-bg);
+}
+
+/* 主要信息：图标和名称 */
+.sftp-file-item__primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  min-width: 0;
+  width: 40%;
+}
+
+.sftp-file-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sftp-file-item__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.sftp-file-item__symlink-indicator {
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* 权限模式 */
+.sftp-file-item__mode {
+  flex: 0 0 100px;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-align: left;
+}
+
+/* 文件大小 */
+.sftp-file-item__size {
+  flex: 0 0 80px;
+  text-align: right;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 修改时间 */
+.sftp-file-item__date {
+  flex: 1;
+  text-align: right;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  min-width: 120px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .sftp-file-item {
+    padding: 6px 8px;
+    gap: 8px;
+  }
+
+  .sftp-file-item__primary {
+    width: 35%;
+  }
+
+  .sftp-file-item__mode {
+    flex: 0 0 80px;
+    font-size: 11px;
+  }
+
+  .sftp-file-item__size {
+    flex: 0 0 60px;
+    font-size: 12px;
+  }
+
+  .sftp-file-item__date {
+    display: none;
+  }
+}

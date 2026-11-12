@@ -1,0 +1,204 @@
+/* ToolApprovalCard 样式 */
+
+/* 等待确认卡片 */
+.tool-approval-card {
+  padding: 16px;
+  background: var(--gray-a3);
+  border: 1px solid var(--amber-a8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tool-approval-card:hover {
+  background: var(--gray-a4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 执行中卡片 */
+.tool-executing-card {
+  padding: 12px;
+  background: var(--blue-a3);
+  border: 1px solid var(--blue-a8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tool-executing-card:hover {
+  background: var(--blue-a4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 已拒绝卡片 */
+.tool-rejected-card {
+  padding: 12px;
+  background: var(--red-a3);
+  border: 1px solid var(--red-a8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tool-rejected-card:hover {
+  background: var(--red-a4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 成功卡片 */
+.tool-success-card {
+  padding: 16px;
+  background: var(--green-a3);
+  border: 1px solid var(--green-a8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tool-success-card:hover {
+  background: var(--green-a4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 错误卡片 */
+.tool-error-card {
+  padding: 16px;
+  background: var(--red-a3);
+  border: 1px solid var(--red-a8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tool-error-card:hover {
+  background: var(--red-a4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 服务器信息 */
+.server-info {
+  padding: 8px 12px;
+  background: var(--gray-a4);
+  border-radius: 4px;
+  border: 1px solid var(--gray-a6);
+}
+
+/* 命令框 */
+.command-box {
+  padding: 12px;
+  background: var(--gray-a4);
+  border-radius: 6px;
+  border: 1px solid var(--gray-a7);
+}
+
+.command-text {
+  word-break: break-all;
+}
+
+/* 警告提示 */
+.warning-box {
+  padding: 8px 12px;
+  background: var(--amber-a3);
+  border-radius: 6px;
+  border-left: 3px solid var(--amber-9);
+}
+
+/* 输出框 */
+.output-box {
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.output-box.stdout {
+  background: var(--gray-a4);
+  border: 1px solid var(--gray-a6);
+}
+
+.output-box.stderr {
+  background: var(--orange-a3);
+  border: 1px solid var(--orange-a8);
+}
+
+.output-box pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+}
+
+/* 图标样式 */
+.icon-warning {
+  color: var(--amber-11);
+}
+
+.icon-success {
+  color: var(--green-11);
+}
+
+.icon-error {
+  color: var(--red-11);
+}
+
+.icon-terminal {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* 旋转动画 */
+.icon-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 输出摘要（折叠状态） */
+.output-summary {
+  padding: 8px 12px;
+  background: var(--gray-a4);
+  border-radius: 4px;
+  border: 1px solid var(--gray-a6);
+  display: inline-block;
+}
+
+/* 展开/折叠按钮 */
+.toggle-button {
+  width: fit-content;
+  cursor: pointer;
+}
+
+/* 快捷选项区域 */
+.quick-options {
+  padding: 12px;
+  background: var(--gray-a3);
+  border-radius: 6px;
+  border: 1px solid var(--gray-a6);
+}
+
+.quick-options-radio {
+  gap: 4px;
+}
+
+.quick-option-item {
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.quick-option-item:hover {
+  background: var(--gray-a4);
+}
+
+.quick-option-item[data-state='checked'] {
+  background: var(--amber-a3);
+  border-color: var(--amber-a8);
+}
+

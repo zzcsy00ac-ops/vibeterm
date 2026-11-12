@@ -1,0 +1,359 @@
+/**
+ * ChatInterface 样式
+ */
+
+.chat-interface {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ==================== 空状态 ==================== */
+
+.chat-interface-empty {
+  height: 100%;
+  color: var(--color-gray);
+}
+
+/* 图标脉搏动画 - 模拟心跳/待响应状态 */
+.empty-state-icon {
+  opacity: 0.4 !important;
+  animation: pulse-scale 1.5s ease-in-out infinite !important;
+}
+
+.empty-state-icon svg {
+  animation: pulse-glow 1.5s ease-in-out infinite !important;
+  filter: drop-shadow(0 0 0px currentColor);
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0px currentColor);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px currentColor);
+  }
+}
+
+/* 主标题无动画 */
+.empty-state-title {
+  /* 动画已移除 */
+}
+
+.chat-interface-messages-empty {
+  height: 100%;
+  color: var(--color-gray);
+}
+
+/* ==================== 头部 ==================== */
+
+.chat-interface-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.model-selector {
+  min-width: 150px;
+}
+
+/* ==================== 消息列表 ==================== */
+
+.chat-interface-messages {
+  flex: 1;
+  overflow: hidden; /* 虚拟化容器处理滚动 */
+  min-height: 0;
+  position: relative;
+}
+
+/* 虚拟化列表容器 */
+.virtual-message-list-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* ==================== 消息项 ==================== */
+
+.message-item {
+  width: 100%;
+  position: relative; /* 为复制按钮的绝对定位提供参照 */
+}
+
+.message-item.user {
+  flex-direction: row-reverse;
+  align-items: center; /* 用户消息：头像和文字垂直居中对齐 */
+}
+
+.message-item.assistant {
+  align-items: flex-start; /* AI消息：保持顶部对齐（之前的样式） */
+}
+
+.message-item.assistant .message-item-content {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.message-item-avatar {
+  flex-shrink: 0;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 8px;
+}
+
+.message-item-content {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.message-item.user .message-item-content {
+  border-bottom-right-radius: 4px;
+}
+
+.message-item.assistant .message-item-content {
+  border-bottom-left-radius: 4px;
+}
+
+/* ==================== 复制按钮 ==================== */
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 0.15s, background 0.15s;
+  background: var(--gray-a3);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: var(--gray-a11);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* 悬浮时显示复制按钮 */
+.message-item:hover .copy-button {
+  opacity: 1;
+}
+
+.copy-button:hover {
+  background: var(--gray-a4);
+}
+
+.copy-button:active {
+  transform: scale(0.95);
+}
+
+/* ==================== 加载动画 ==================== */
+
+.chat-interface-loading {
+  padding: 8px 16px;
+  gap: 8px;
+  color: var(--color-gray);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==================== 输入框 ==================== */
+
+/* 统一的输入面板容器 */
+.chat-input-panel {
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  min-height: 100px;
+}
+
+/* 工具栏区域 */
+.input-panel-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+/* 内联模型选择器 */
+.model-select-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--gray-a7);
+  border-radius: var(--radius-3);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: var(--font-size-2);
+  outline: none;
+  transition: all 0.15s;
+}
+
+.model-select-inline:hover {
+  background: var(--gray-a3);
+}
+
+.model-select-inline:focus {
+  border-color: var(--accent-9);
+  box-shadow: 0 0 0 1px var(--accent-9);
+}
+
+/* 下拉图标 */
+.select-icon {
+  display: flex;
+  align-items: center;
+  color: var(--gray-a11);
+}
+
+/* 模型选择器下拉内容 */
+.model-select-content {
+  position: fixed;
+  background: var(--color-background);
+  border: 1px solid var(--gray-a5);
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-5);
+  z-index: var(--z-popover);
+  min-width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.model-select-viewport {
+  padding: 4px;
+}
+
+.model-select-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-2);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.model-select-item:hover {
+  background: var(--gray-a4);
+}
+
+.model-select-item[data-state="checked"] {
+  background: var(--accent-a4);
+  color: var(--accent-11);
+}
+
+/* 工具按钮区域 */
+.toolbar-actions {
+  display: flex;
+  gap: 4px;
+}
+
+/* ==================== Token 统计流光效果 ==================== */
+
+.token-display-shimmer span {
+  background: linear-gradient(
+    90deg,
+    var(--color-gray) 0%,
+    #fff 25%,
+    var(--color-gray) 50%,
+    #fff 75%,
+    var(--color-gray) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-shimmer 3s linear infinite;
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* 输入框区域 */
+.input-panel-textarea {
+  gap: 8px;
+}
+
+/* 多行输入框 */
+.chat-textarea {
+  flex: 1;
+  min-height: 60px;
+  max-height: 200px;
+  resize: none;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-background);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.chat-textarea:focus {
+  outline: none;
+  border-color: var(--color-focus, var(--tomato-9));
+}
+
+.chat-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 保留旧样式用于向后兼容 */
+.chat-interface-input {
+  padding: 16px;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.chat-input {
+  min-height: 44px;
+  max-height: 200px;
+}
+
+.chat-input textarea {
+  resize: none;
+}
+
+/* ==================== 可访问性：Reduced Motion ==================== */
+/* 已移除 @media (prefers-reduced-motion: reduce) 规则
+   原因：该规则在 Windows WebView2 环境下可能意外触发，
+         导致 spin 等动画效果被禁用
+*/

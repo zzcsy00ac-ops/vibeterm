@@ -1,0 +1,100 @@
+/**
+ * ChatInput 组件样式
+ *
+ * Token Badge - 被动信息指示器设计
+ * - 无交互视觉暗示（无背景、无边框、无 cursor: pointer）
+ * - 柔和的文本颜色，融入界面
+ * - 悬停时显示详细信息
+ */
+
+/* ==================== 被动 Token Badge ==================== */
+
+.token-badge-passive {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  cursor: default;
+  transition: opacity 150ms ease;
+  font-variant-numeric: tabular-nums;
+}
+
+.token-badge-passive:hover {
+  opacity: 0.7;
+}
+
+.token-badge-icon {
+  flex-shrink: 0;
+  color: var(--gray-10);
+  transition: color 150ms ease;
+}
+
+.token-badge-passive:hover .token-badge-icon {
+  color: var(--gray-11);
+}
+
+.token-badge-text {
+  color: var(--gray-11);
+  font-weight: 500;
+  font-family: var(--default-font-family);
+  transition: color 150ms ease;
+}
+
+.token-badge-passive:hover .token-badge-text {
+  color: var(--gray-12);
+}
+
+/* ==================== 减少动画偏好 ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .token-badge-passive,
+  .token-badge-icon,
+  .token-badge-text {
+    transition: none !important;
+  }
+}
+
+/* ==================== 高对比度模式 ==================== */
+
+@media (prefers-contrast: high) {
+  .token-badge-passive {
+    opacity: 1 !important;
+  }
+
+  .token-badge-text {
+    color: var(--gray-12);
+  }
+}
+
+/* ==================== Token Tooltip 内容 ==================== */
+
+.token-tooltip-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.token-tooltip-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.token-tooltip-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.token-tooltip-simple {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.token-tooltip-divider {
+  height: 1px;
+  background: var(--gray-a6);
+  margin: 4px 0;
+}

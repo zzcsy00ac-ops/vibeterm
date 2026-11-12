@@ -1,0 +1,120 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 19ae8fcc4d4caada25ca46c6e6078dbca2c52cfa..6404cbd3cd72f99ccb7104a56bc0426f04edb619 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1144,6 +1144,13 @@ async function convertToLanguageModelPrompt({
+       }
+     }
+   }
++  // PATCHED: Calculate pending approval tool call IDs (need approval but not yet approved)
++  // These should be skipped in the missing tool results check
++  const pendingApprovalToolCallIds = new Set(approvalIdToToolCallId.values());
++  for (const id of approvedToolCallIds) {
++    pendingApprovalToolCallIds.delete(id);
++  }
++  console.log('[PATCHED] pendingApprovalToolCallIds:', Array.from(pendingApprovalToolCallIds));
+   const messages = [
+     ...prompt.system != null ? typeof prompt.system === "string" ? [{ role: "system", content: prompt.system }] : asArray(prompt.system).map((message) => ({
+       role: "system",
+@@ -1172,7 +1179,8 @@ async function convertToLanguageModelPrompt({
+     switch (message.role) {
+       case "assistant": {
+         for (const content of message.content) {
+-          if (content.type === "tool-call" && !content.providerExecuted) {
++          // PATCHED: Skip tool calls that are pending approval
++          if (content.type === "tool-call" && !content.providerExecuted && !pendingApprovalToolCallIds.has(content.toolCallId)) {
+             toolCallIds.add(content.toolCallId);
+           }
+         }
+@@ -2434,7 +2442,9 @@ function collectToolApprovals({
+   messages
+ }) {
+   const lastMessage = messages.at(-1);
++  console.log('[collectToolApprovals] lastMessage role:', lastMessage?.role);
+   if ((lastMessage == null ? void 0 : lastMessage.role) != "tool") {
++    console.log('[collectToolApprovals] lastMessage is not tool, returning empty');
+     return {
+       approvedToolApprovals: [],
+       deniedToolApprovals: []
+@@ -2468,11 +2478,13 @@ function collectToolApprovals({
+       toolResults[part.toolCallId] = part;
+     }
+   }
++  console.log('[collectToolApprovals] toolResults:', Object.keys(toolResults));
+   const approvedToolApprovals = [];
+   const deniedToolApprovals = [];
+   const approvalResponses = lastMessage.content.filter(
+     (part) => part.type === "tool-approval-response"
+   );
++  console.log('[collectToolApprovals] approvalResponses:', approvalResponses.length);
+   for (const approvalResponse of approvalResponses) {
+     const approvalRequest = toolApprovalRequestsByApprovalId[approvalResponse.approvalId];
+     if (approvalRequest == null) {
+@@ -2481,6 +2493,7 @@ function collectToolApprovals({
+       });
+     }
+     if (toolResults[approvalRequest.toolCallId] != null) {
++      console.log('[collectToolApprovals] Skipping already executed:', approvalRequest.toolCallId);
+       continue;
+     }
+     const toolCall = toolCallsByToolCallId[approvalRequest.toolCallId];
+@@ -2495,12 +2508,14 @@ function collectToolApprovals({
+       approvalResponse,
+       toolCall
+     };
++    console.log('[collectToolApprovals] Adding approval:', approvalResponse.approved ? 'approved' : 'denied', toolCall.toolName);
+     if (approvalResponse.approved) {
+       approvedToolApprovals.push(approval);
+     } else {
+       deniedToolApprovals.push(approval);
+     }
+   }
++  console.log('[collectToolApprovals] Result - approved:', approvedToolApprovals.length, 'denied:', deniedToolApprovals.length);
+   return { approvedToolApprovals, deniedToolApprovals };
+ }
+ 
+@@ -4240,22 +4255,28 @@ async function executeTools({
+   abortSignal,
+   experimental_context
+ }) {
+-  const toolOutputs = await Promise.all(
+-    toolCalls.map(
+-      async (toolCall) => executeToolCall({
+-        toolCall,
+-        tools,
+-        tracer,
+-        telemetry,
+-        messages,
+-        abortSignal,
+-        experimental_context
+-      })
+-    )
+-  );
+-  return toolOutputs.filter(
+-    (output) => output != null
+-  );
++  // PATCHED: Changed from Promise.all to sequential execution
++  // This ensures tools are executed one at a time instead of in parallel
++  console.log('[PATCHED executeTools] Starting sequential execution, toolCalls:', toolCalls.length);
++  const toolOutputs = [];
++  for (const toolCall of toolCalls) {
++    console.log('[PATCHED executeTools] Executing tool:', toolCall.toolName, toolCall.toolCallId);
++    const output = await executeToolCall({
++      toolCall,
++      tools,
++      tracer,
++      telemetry,
++      messages,
++      abortSignal,
++      experimental_context
++    });
++    console.log('[PATCHED executeTools] Tool result:', toolCall.toolName, output?.type);
++    if (output != null) {
++      toolOutputs.push(output);
++    }
++  }
++  console.log('[PATCHED executeTools] Completed, outputs:', toolOutputs.length);
++  return toolOutputs;
+ }
+ var DefaultGenerateTextResult = class {
+   constructor(options) {

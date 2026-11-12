@@ -1,0 +1,80 @@
+.private-key-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* 已保存私钥 */
+.key-status-saved {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--gray-a3);
+  border: 1px solid var(--gray-a6);
+  border-radius: 6px;
+}
+
+.key-icon {
+  color: var(--gray-10);
+  flex-shrink: 0;
+}
+
+.key-path {
+  flex: 1;
+  font-size: 13px;
+  color: var(--gray-11);
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove-key-btn {
+  padding: 4px 8px;
+  color: var(--gray-10);
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.remove-key-btn:hover {
+  color: var(--red-11);
+  background: var(--red-a4);
+}
+
+/* 添加私钥按钮 */
+.add-key-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--gray-11);
+  background: var(--gray-a3);
+  border: 1px dashed var(--gray-a6);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.add-key-btn:hover {
+  background: var(--gray-a4);
+  border-color: var(--gray-a8);
+}
+
+.key-passphrase-hint {
+  padding: 8px 12px;
+  background: var(--blue-a4);
+  border: 1px solid var(--blue-a7);
+  border-radius: 6px;
+}
+
+.hint-text {
+  font-size: 12px;
+  color: var(--blue-11);
+  margin: 0;
+}

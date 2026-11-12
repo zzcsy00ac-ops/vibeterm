@@ -1,0 +1,168 @@
+/**
+ * SFTP 工具栏组件样式
+ */
+
+.sftp-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  gap: 8px;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+  min-height: 48px;
+}
+
+/* ==================== 左侧区域 ==================== */
+
+.sftp-toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ==================== 右侧区域 ==================== */
+
+.sftp-toolbar__right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.sftp-toolbar__separator {
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-border);
+  margin: 0 4px;
+}
+
+/* ==================== 按钮样式 ==================== */
+
+.sftp-toolbar__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.sftp-toolbar__button:hover:not(:disabled) {
+  background-color: var(--color-hover-bg);
+  color: var(--color-text-primary);
+}
+
+.sftp-toolbar__button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.sftp-toolbar__button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* 激活状态（如过滤器按钮） */
+.sftp-toolbar__button[data-active="true"] {
+  background-color: var(--color-selected-bg);
+  color: var(--color-primary);
+}
+
+/* 关闭按钮特殊样式 */
+.sftp-toolbar__button--close:hover {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+/* ==================== 面包屑导航 ==================== */
+
+.sftp-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.sftp-breadcrumb::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.sftp-breadcrumb__segment {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sftp-breadcrumb__separator {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.sftp-breadcrumb__item {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.sftp-breadcrumb__item:hover {
+  background-color: var(--color-hover-bg);
+  color: var(--color-text-primary);
+}
+
+.sftp-breadcrumb__item--root {
+  padding: 4px;
+  color: var(--color-text-muted);
+}
+
+.sftp-breadcrumb__item--current {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  cursor: default;
+}
+
+.sftp-breadcrumb__item--current:hover {
+  background-color: transparent;
+}
+
+/* ==================== 响应式调整 ==================== */
+
+@media (max-width: 768px) {
+  .sftp-toolbar {
+    padding: 6px 12px;
+    min-height: 44px;
+  }
+
+  .sftp-toolbar__button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .sftp-breadcrumb__item {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  .sftp-breadcrumb__item--root {
+    padding: 3px;
+  }
+}

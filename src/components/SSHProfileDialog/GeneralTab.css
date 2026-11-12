@@ -1,0 +1,163 @@
+/**
+ * General 标签页样式
+ */
+
+.general-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-a11);
+}
+
+.required {
+  color: var(--red-9);
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field.flex-1 {
+  flex: 1;
+}
+
+.form-field.w-24 {
+  width: 96px;
+}
+
+.form-input {
+  padding: 8px 12px;
+  border: 1px solid var(--gray-a7);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--color-background);
+  color: var(--gray-a12);
+  outline: none;
+  transition: all 0.15s;
+  /* 禁止自动首字母大写 */
+  text-transform: none !important;
+}
+
+.form-input:focus {
+  border-color: var(--accent-9);
+  box-shadow: 0 0 0 3px rgba(var(--accent-9-rgb), 0.1);
+}
+
+.form-input.input-error {
+  border-color: var(--red-9);
+}
+
+.form-input::placeholder {
+  color: var(--gray-a9);
+}
+
+.field-hint {
+  font-size: 12px;
+  color: var(--gray-a9);
+}
+
+/* 错误提示 */
+.error-text {
+  font-size: 12px;
+  color: var(--red-9);
+}
+
+/* Radio Group 样式 */
+.radio-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--gray-a7);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.radio-option:hover {
+  background: var(--gray-a4);
+}
+
+.radio-option:has(.radio-item[data-state="checked"]) {
+  border-color: var(--accent-9);
+  background: var(--accent-4);
+}
+
+.radio-item {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--gray-a8);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s;
+}
+
+.radio-item:focus {
+  outline: 2px solid var(--accent-9);
+  outline-offset: 2px;
+}
+
+.radio-item[data-state="checked"] {
+  border-color: var(--accent-9);
+  background: var(--accent-9);
+}
+
+.radio-item[data-state="checked"]::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--gray-a11);
+  cursor: pointer;
+}
+
+.radio-label.radio-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.radio-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--gray-a11);
+}

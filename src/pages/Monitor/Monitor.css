@@ -1,0 +1,152 @@
+/**
+ * Monitor 监控页面样式
+ */
+
+.monitor-page {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  padding: 16px;
+  background: var(--color-background);
+  overflow-y: auto;
+}
+
+.monitor-page--error {
+  justify-content: center;
+  align-items: center;
+}
+
+/* 页面标题 */
+.monitor-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-a5);
+}
+
+/* 标签页容器 */
+.monitor-tabs {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 标签页内容区 */
+.monitor-content {
+  flex: 0 1 auto;
+  padding-top: 16px;
+}
+
+/* 状态颜色 */
+:root {
+  --color-healthy: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-cpu: #3b82f6;
+  --color-memory: #8b5cf6;
+  --color-disk: #ec4899;
+  --color-upload: #3b82f6;
+  --color-download: #10b981;
+}
+
+/* 指标卡片 */
+.metric-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--color-surface);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 进度条 */
+.progress-bar {
+  height: 6px;
+  background: var(--gray-a4);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+/* 磁盘进度条 */
+.disk-progress-bar {
+  height: 12px;
+  background: var(--gray-a4);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.disk-progress-fill {
+  height: 100%;
+  transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+/* 加载状态 */
+.monitor-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 200px;
+}
+
+.monitor-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--gray-a4);
+  border-top-color: var(--accent-9);
+  border-radius: 50%;
+  animation: monitor-spin 1s linear infinite;
+}
+
+@keyframes monitor-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tab 内容基础样式 */
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 卡片网格 */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* 图表容器 */
+.chart-container {
+  width: 100%;
+  height: 250px;
+}
+
+/* 带宽指示器 */
+.bandwidth-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bandwidth-indicator.active {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}

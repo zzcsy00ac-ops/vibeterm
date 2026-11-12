@@ -1,0 +1,5 @@
+.sideTools {
+    display: flex;
+    background-color: var(--color-surface);
+    padding: .5em;
+}

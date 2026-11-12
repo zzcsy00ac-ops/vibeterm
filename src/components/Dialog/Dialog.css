@@ -1,0 +1,213 @@
+/* ========== 遮罩层 ========== */
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: var(--z-dialog-modal);
+  animation: dialog-fade-in 0.15s ease-out;
+}
+
+/* 嵌套对话框遮罩层（更高的 z-index） */
+.dialog-overlay--nested {
+  z-index: var(--z-nested-modal-backdrop);
+}
+
+@keyframes dialog-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========== 对话框内容 ========== */
+.dialog-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 280px;
+  max-width: 400px;
+  width: auto;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  z-index: var(--z-dialog-content);
+  padding: 20px;
+  animation: dialog-slide-in 0.2s ease-out;
+}
+
+/* 嵌套对话框内容（更高的 z-index） */
+.dialog-content--nested {
+  z-index: var(--z-nested-modal);
+}
+
+@keyframes dialog-slide-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* ========== 标题 ========== */
+.dialog-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-12);
+  margin: 0 0 12px 0;
+}
+
+/* 隐藏标题（用于默认的可访问性，视觉上隐藏） */
+.dialog-title--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.dialog-icon {
+  flex-shrink: 0;
+}
+
+.dialog-icon--danger {
+  color: var(--color-error);
+}
+
+.dialog-icon--warning {
+  color: var(--color-warning);
+}
+
+/* ========== 描述/内容 ========== */
+.dialog-description {
+  font-size: 14px;
+  color: var(--gray-11);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.dialog-message {
+  margin: 0;
+}
+
+/* ========== 输入框 ========== */
+.dialog-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-surface);
+  color: var(--gray-12);
+  outline: none;
+  transition: border-color 0.15s ease;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.dialog-input:focus {
+  border-color: var(--accent-9);
+}
+
+.dialog-input::placeholder {
+  color: var(--gray-9);
+}
+
+/* ========== 按钮 ========== */
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.dialog-button {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+.dialog-button:focus-visible {
+  outline: 2px solid var(--accent-8);
+  outline-offset: 2px;
+}
+
+/* 取消按钮 */
+.dialog-button--cancel {
+  background-color: var(--color-surface);
+  color: var(--gray-11);
+}
+
+.dialog-button--cancel:hover {
+  background-color: var(--accent-3);
+}
+
+.dialog-button--cancel:active {
+  background-color: var(--accent-4);
+}
+
+/* 确认按钮 - 默认 */
+.dialog-button--confirm.dialog-button--default {
+  background-color: var(--accent-9);
+  color: white;
+  border-color: var(--accent-9);
+}
+
+.dialog-button--confirm.dialog-button--default:hover {
+  filter: brightness(1.1);
+}
+
+.dialog-button--confirm.dialog-button--default:active {
+  filter: brightness(1.05);
+}
+
+/* 确认按钮 - 危险 */
+.dialog-button--confirm.dialog-button--danger {
+  /* 使用 Radix 的红色系统 */
+  background-color: var(--red-9);
+  color: var(--red-1);
+  border-color: var(--red-9);
+}
+
+.dialog-button--confirm.dialog-button--danger:hover {
+  background-color: var(--red-10);
+  border-color: var(--red-10);
+}
+
+.dialog-button--confirm.dialog-button--danger:active {
+  background-color: var(--red-11);
+  border-color: var(--red-11);
+}
+
+/* 确认按钮 - 警告 */
+.dialog-button--confirm.dialog-button--warning {
+  background-color: var(--color-warning);
+  color: white;
+  border-color: var(--color-warning);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.dialog-button--confirm.dialog-button--warning:hover {
+  filter: brightness(0.95);
+}
+
+.dialog-button--confirm.dialog-button--warning:active {
+  filter: brightness(0.9);
+}

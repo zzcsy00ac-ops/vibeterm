@@ -1,0 +1,53 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main", "settings", "monitor", "monitor*"],
+  "permissions": [
+    "core:default",
+    "opener:default",
+    "http:default",
+    {
+      "identifier": "http:default",
+      "allow": [
+        { "url": "http://localhost:*" },
+        { "url": "http://127.0.0.1:*" },
+        { "url": "http://0.0.0.0:*" },
+        { "url": "https://*" },
+        { "url": "http://*" }
+      ]
+    },
+    "fs:allow-read",
+    "core:window:allow-minimize",
+    "core:window:allow-maximize",
+    "core:window:allow-unmaximize",
+    "core:window:allow-close",
+    "core:window:allow-start-dragging",
+    "core:window:allow-is-maximized",
+    "core:window:allow-create",
+    "core:window:allow-center",
+    "core:window:allow-show",
+    "core:window:allow-set-focus",
+    "core:window:allow-outer-position",
+    "core:window:allow-outer-size",
+    "core:webview:allow-create-webview-window",
+    "store:allow-load",
+    "store:allow-save",
+    "store:allow-get",
+    "store:allow-set",
+    "store:allow-delete",
+    "store:allow-has",
+    "keyring:allow-set-password",
+    "keyring:allow-get-password",
+    "keyring:allow-delete-password",
+    "core:event:allow-emit",
+    "core:event:allow-listen",
+    "core:event:allow-unlisten",
+    "dialog:allow-open",
+    "dialog:allow-save",
+    "dialog:allow-message",
+    "dialog:allow-confirm",
+    "clipboard-manager:allow-read-text",
+    "clipboard-manager:allow-write-text"
+  ]
+}

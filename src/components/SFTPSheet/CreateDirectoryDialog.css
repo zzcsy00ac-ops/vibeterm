@@ -1,0 +1,154 @@
+/* ==================== 创建目录对话框样式 ==================== */
+
+.create-dir-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: create-dir-fade-in 0.15s ease-out;
+}
+
+@keyframes create-dir-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.create-dir-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background-color: var(--color-background);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  z-index: 1001;
+  animation: create-dir-slide-in 0.2s ease-out;
+}
+
+@keyframes create-dir-slide-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 标题 */
+.create-dir-title {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* 内容区域 */
+.create-dir-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create-dir-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.create-dir-input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.create-dir-input:focus {
+  border-color: var(--color-primary);
+}
+
+.create-dir-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* 错误提示 */
+.create-dir-error {
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--color-error);
+  background-color: var(--color-error-surface);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.create-dir-error::before {
+  content: '!';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  background-color: var(--color-error);
+  color: white;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* 底部按钮 */
+.create-dir-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.create-dir-button {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.create-dir-button--cancel {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.create-dir-button--cancel:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+}
+
+.create-dir-button--create {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+.create-dir-button--create:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.create-dir-button--create:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

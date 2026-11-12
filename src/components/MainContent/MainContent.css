@@ -1,0 +1,118 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* 标签列表 */
+.tabs-list {
+  display: flex;
+  gap: 2px;
+  padding: 8px 8px 0;
+  background: var(--color-panel-surface);
+  border-bottom: 1px solid var(--gray-a7);
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-shrink: 0;
+}
+
+/* 标签触发器 */
+.tab-trigger {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 4px 10px;
+  font-size: 13px;
+  background: var(--color-surface);
+  border: 1px solid var(--gray-a6);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
+}
+
+.tab-trigger:hover {
+  background: var(--gray-a3);
+}
+
+.tab-trigger[data-state="active"] {
+  background: var(--color-background);
+  border-bottom-color: transparent;
+  font-weight: 600;
+  box-shadow: 0 -2px 0 var(--accent-9), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* tab-trigger 使用 flex 布局替代 .tab-content */
+.tab-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-title {
+  white-space: nowrap;
+}
+
+/* 关闭按钮 - 使用 span 模拟 button */
+.tab-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--gray-a11);
+  transition: background 0.15s ease;
+}
+
+.tab-close:hover {
+  background: var(--gray-a7);
+}
+
+.tab-close:focus {
+  outline: 2px solid var(--accent-9);
+  outline-offset: 2px;
+}
+
+/* 标签内容区 */
+.tabs-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 标签页面板 - 使用 display 保持挂载 */
+.tab-pane {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--gray-a9);
+  font-size: 14px;
+}

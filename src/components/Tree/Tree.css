@@ -1,0 +1,64 @@
+/* ========== 容器 ========== */
+.tree-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  user-select: none;
+}
+
+.tree-view {
+  padding: 4px 0;
+}
+
+/* ========== 树节点 ========== */
+.tree-node {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.tree-node:hover {
+  background-color: var(--accent-a3);
+}
+
+.tree-node.selected {
+  background-color: var(--accent-a4);
+}
+
+/* 展开/折叠图标 */
+.tree-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gray-10);
+}
+
+.tree-toggle:hover {
+  background-color: var(--accent-a4);
+  border-radius: 4px;
+}
+
+/* 节点图标 */
+.tree-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--accent-9);
+}
+
+/* 节点标题 */
+.tree-title {
+  font-size: 13px;
+  color: var(--gray-12);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,52 @@
+/**
+ * Data Import/Export Form Styles
+ */
+
+.data-form {
+  max-width: 600px;
+}
+
+.status-card {
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-success {
+  background-color: var(--grass-2);
+  border: 1px solid var(--grass-6);
+}
+
+.status-error {
+  background-color: var(--red-2);
+  border: 1px solid var(--red-6);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .data-form {
+    max-width: 100%;
+  }
+}

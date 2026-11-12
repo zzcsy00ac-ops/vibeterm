@@ -1,0 +1,110 @@
+/**
+ * 删除确认对话框样式
+ * 使用 Radix UI AlertDialog，危险操作按钮使用红色
+ */
+
+/* Alert Dialog Overlay */
+.alert-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--black-a11);
+  opacity: 0.5;
+  z-index: var(--z-modal-backdrop);
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Alert Dialog Content */
+.alert-dialog-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-background);
+  border: 1px solid var(--gray-a5);
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-5);
+  z-index: var(--z-modal);
+  min-width: 400px;
+  max-width: 90vw;
+  padding: 24px;
+  animation: scaleIn 0.15s ease-out;
+  color: var(--color-text);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Alert Dialog Title */
+.alert-dialog-title {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 8px;
+  color: var(--color-text);
+  line-height: var(--line-height-tight);
+}
+
+/* Alert Dialog Description */
+.alert-dialog-description {
+  font-size: var(--font-size-2);
+  color: var(--gray-11);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Alert Dialog Footer */
+.alert-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-3);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.15s;
+  border: none;
+}
+
+.btn-secondary {
+  background: var(--gray-a3);
+  color: var(--gray-12);
+}
+
+.btn-secondary:hover {
+  background: var(--gray-a4);
+}
+
+.btn-danger {
+  background: var(--red-9);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: var(--red-10);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
